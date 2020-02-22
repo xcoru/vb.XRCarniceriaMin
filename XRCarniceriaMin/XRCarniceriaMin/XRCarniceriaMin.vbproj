@@ -73,11 +73,53 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="GUI\GUI_Articulos.Designer.vb">
+      <DependentUpon>GUI_Articulos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Articulos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="GUI\GUI_Caja_Corte.Designer.vb">
+      <DependentUpon>GUI_Caja_Corte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Caja_Corte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Caja_Inicio.Designer.vb">
+      <DependentUpon>GUI_Caja_Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Caja_Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Config.Designer.vb">
+      <DependentUpon>GUI_Config.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Login.Designer.vb">
+      <DependentUpon>GUI_Login.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Ventas.Designer.vb">
+      <DependentUpon>GUI_Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Ventas_Cobrar.Designer.vb">
+      <DependentUpon>GUI_Ventas_Cobrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Ventas_Cobrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\GUI_Ventas_Reporte.Designer.vb">
+      <DependentUpon>GUI_Ventas_Reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\GUI_Ventas_Reporte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -97,6 +139,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\GUI_Caja_Inicio.resx">
+      <DependentUpon>GUI_Caja_Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Config.resx">
+      <DependentUpon>GUI_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Login.resx">
+      <DependentUpon>GUI_Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Ventas_Cobrar.resx">
+      <DependentUpon>GUI_Ventas_Cobrar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
