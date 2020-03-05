@@ -139,6 +139,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GUI\GUI_Articulos.resx">
+      <DependentUpon>GUI_Articulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\GUI_Caja_Corte.resx">
+      <DependentUpon>GUI_Caja_Corte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\GUI_Caja_Inicio.resx">
       <DependentUpon>GUI_Caja_Inicio.vb</DependentUpon>
     </EmbeddedResource>
