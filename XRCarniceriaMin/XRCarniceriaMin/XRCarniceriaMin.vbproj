@@ -73,53 +73,64 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\GUI_Articulos.Designer.vb">
+    <Compile Include="Datos\D_Catalogo.vb" />
+    <Compile Include="Datos\D_Config.vb" />
+    <Compile Include="Datos\D_DataBase.vb" />
+    <Compile Include="Datos\D_Negocio.vb" />
+    <Compile Include="Datos\D_Usuario.vb" />
+    <Compile Include="Datos\D_Ventas.vb" />
+    <Compile Include="Identidad\I_Catalogo.vb" />
+    <Compile Include="Identidad\I_Config.vb" />
+    <Compile Include="Identidad\I_Negocio.vb" />
+    <Compile Include="Identidad\I_Usuario.vb" />
+    <Compile Include="Identidad\I_Ventas.vb" />
+    <Compile Include="Presentacion\GUI_Articulos.Designer.vb">
       <DependentUpon>GUI_Articulos.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_Articulos.vb">
+    <Compile Include="Presentacion\GUI_Articulos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Caja_Corte.Designer.vb">
+    <Compile Include="Presentacion\GUI_Caja_Corte.Designer.vb">
       <DependentUpon>GUI_Caja_Corte.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_Caja_Corte.vb">
+    <Compile Include="Presentacion\GUI_Caja_Corte.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Caja_Inicio.Designer.vb">
+    <Compile Include="Presentacion\GUI_Caja_Inicio.Designer.vb">
       <DependentUpon>GUI_Caja_Inicio.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_Caja_Inicio.vb">
+    <Compile Include="Presentacion\GUI_Caja_Inicio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Config.Designer.vb">
+    <Compile Include="Presentacion\GUI_Config.Designer.vb">
       <DependentUpon>GUI_Config.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_Config.vb">
+    <Compile Include="Presentacion\GUI_Config.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Login.vb">
+    <Compile Include="Presentacion\GUI_Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Login.Designer.vb">
+    <Compile Include="Presentacion\GUI_Login.Designer.vb">
       <DependentUpon>GUI_Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Ventas.Designer.vb">
+    <Compile Include="Presentacion\GUI_Ventas.Designer.vb">
       <DependentUpon>GUI_Ventas.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_Ventas.vb">
+    <Compile Include="Presentacion\GUI_Ventas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Ventas_Cobrar.Designer.vb">
+    <Compile Include="Presentacion\GUI_Ventas_Cobrar.Designer.vb">
       <DependentUpon>GUI_Ventas_Cobrar.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_Ventas_Cobrar.vb">
+    <Compile Include="Presentacion\GUI_Ventas_Cobrar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\GUI_Ventas_Reporte.Designer.vb">
+    <Compile Include="Presentacion\GUI_Ventas_Reporte.Designer.vb">
       <DependentUpon>GUI_Ventas_Reporte.vb</DependentUpon>
     </Compile>
-    <Compile Include="GUI\GUI_Ventas_Reporte.vb">
+    <Compile Include="Presentacion\GUI_Ventas_Reporte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -139,22 +150,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GUI\GUI_Articulos.resx">
+    <EmbeddedResource Include="Presentacion\GUI_Articulos.resx">
       <DependentUpon>GUI_Articulos.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_Caja_Corte.resx">
+    <EmbeddedResource Include="Presentacion\GUI_Caja_Corte.resx">
       <DependentUpon>GUI_Caja_Corte.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_Caja_Inicio.resx">
+    <EmbeddedResource Include="Presentacion\GUI_Caja_Inicio.resx">
       <DependentUpon>GUI_Caja_Inicio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_Config.resx">
+    <EmbeddedResource Include="Presentacion\GUI_Config.resx">
       <DependentUpon>GUI_Config.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_Login.resx">
+    <EmbeddedResource Include="Presentacion\GUI_Login.resx">
       <DependentUpon>GUI_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\GUI_Ventas_Cobrar.resx">
+    <EmbeddedResource Include="Presentacion\GUI_Ventas.resx">
+      <DependentUpon>GUI_Ventas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\GUI_Ventas_Cobrar.resx">
       <DependentUpon>GUI_Ventas_Cobrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -175,6 +189,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Negocios\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
