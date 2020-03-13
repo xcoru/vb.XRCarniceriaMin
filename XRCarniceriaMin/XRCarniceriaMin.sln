@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "XRCarniceriaMin", "XRCarniceriaMin\XRCarniceriaMin.vbproj", "{1D10F54A-1C91-4CD2-9D96-68682D4A4C99}"
 EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Libersoft", "..\..\Libersoft\Libersoft\Libersoft.vbproj", "{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1D10F54A-1C91-4CD2-9D96-68682D4A4C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D10F54A-1C91-4CD2-9D96-68682D4A4C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D10F54A-1C91-4CD2-9D96-68682D4A4C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD6B19F-7081-41C5-9D5B-14FFAE70469C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

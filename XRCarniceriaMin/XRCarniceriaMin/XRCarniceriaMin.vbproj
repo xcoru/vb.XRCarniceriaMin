@@ -48,6 +48,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.19\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -75,7 +79,7 @@
   <ItemGroup>
     <Compile Include="Datos\D_Catalogo.vb" />
     <Compile Include="Datos\D_Config.vb" />
-    <Compile Include="Datos\D_DataBase.vb" />
+    <Compile Include="Datos\Conexion.vb" />
     <Compile Include="Datos\D_Negocio.vb" />
     <Compile Include="Datos\D_Usuario.vb" />
     <Compile Include="Datos\D_Ventas.vb" />
@@ -192,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Negocios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Libersoft\Libersoft\Libersoft.vbproj">
+      <Project>{9cd6b19f-7081-41c5-9d5b-14ffae70469c}</Project>
+      <Name>Libersoft</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
