@@ -32,7 +32,8 @@ Partial Class GUI_Caja_Corte
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,7 +54,7 @@ Partial Class GUI_Caja_Corte
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(66, 75)
+        Me.Label2.Location = New System.Drawing.Point(46, 63)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(115, 22)
         Me.Label2.TabIndex = 4
@@ -62,7 +63,7 @@ Partial Class GUI_Caja_Corte
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(41, 114)
+        Me.Label3.Location = New System.Drawing.Point(370, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(140, 22)
         Me.Label3.TabIndex = 5
@@ -71,7 +72,7 @@ Partial Class GUI_Caja_Corte
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(45, 150)
+        Me.Label4.Location = New System.Drawing.Point(25, 138)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(136, 22)
         Me.Label4.TabIndex = 6
@@ -98,9 +99,10 @@ Partial Class GUI_Caja_Corte
         '
         'Label6
         '
-        Me.Label6.BackColor = System.Drawing.Color.PeachPuff
+        Me.Label6.BackColor = System.Drawing.Color.LightBlue
         Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(187, 75)
+        Me.Label6.ForeColor = System.Drawing.Color.Blue
+        Me.Label6.Location = New System.Drawing.Point(163, 63)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(174, 28)
         Me.Label6.TabIndex = 9
@@ -110,7 +112,8 @@ Partial Class GUI_Caja_Corte
         '
         Me.Label7.BackColor = System.Drawing.Color.LightGreen
         Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(187, 111)
+        Me.Label7.ForeColor = System.Drawing.Color.Blue
+        Me.Label7.Location = New System.Drawing.Point(516, 63)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(174, 28)
         Me.Label7.TabIndex = 10
@@ -118,10 +121,10 @@ Partial Class GUI_Caja_Corte
         '
         'Label8
         '
-        Me.Label8.BackColor = System.Drawing.Color.PaleTurquoise
+        Me.Label8.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Label8.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.Blue
-        Me.Label8.Location = New System.Drawing.Point(187, 147)
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(163, 135)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(174, 28)
         Me.Label8.TabIndex = 11
@@ -132,24 +135,33 @@ Partial Class GUI_Caja_Corte
         Me.Button1.BackColor = System.Drawing.Color.DeepSkyBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(425, 73)
+        Me.Button1.Location = New System.Drawing.Point(575, 130)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(115, 33)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Imprimir"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'Button2
+        'Label9
         '
-        Me.Button2.BackColor = System.Drawing.Color.LimeGreen
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(425, 114)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(115, 33)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Cerrar caja"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.Label9.BackColor = System.Drawing.Color.Coral
+        Me.Label9.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(163, 98)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(174, 28)
+        Me.Label9.TabIndex = 15
+        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(2, 101)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(159, 22)
+        Me.Label10.TabIndex = 14
+        Me.Label10.Text = "Egreso de caja: $"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'GUI_Caja_Corte
         '
@@ -157,7 +169,8 @@ Partial Class GUI_Caja_Corte
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(885, 521)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -188,5 +201,6 @@ Partial Class GUI_Caja_Corte
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
 End Class

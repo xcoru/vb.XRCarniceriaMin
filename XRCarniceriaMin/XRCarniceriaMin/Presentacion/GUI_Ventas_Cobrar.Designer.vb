@@ -158,7 +158,7 @@ Partial Class GUI_Ventas_Cobrar
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "GUI_Ventas_Cobrar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "GUI_Ventas_Cobrar"
+        Me.Text = "Cobrar"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
