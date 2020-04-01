@@ -27,14 +27,14 @@ Partial Class GUI_Caja_Corte
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
+        Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.txtInicioCaja = New System.Windows.Forms.Label()
+        Me.txtVentasdia = New System.Windows.Forms.Label()
+        Me.txtTotalCaja = New System.Windows.Forms.Label()
+        Me.btnImprimir = New System.Windows.Forms.Button()
+        Me.txtEgresoCaja = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -88,70 +88,70 @@ Partial Class GUI_Caja_Corte
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Detalles de ventas"
         '
-        'DataGridView1
+        'dgvTabla
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 237)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(885, 284)
-        Me.DataGridView1.TabIndex = 8
+        Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvTabla.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.dgvTabla.Location = New System.Drawing.Point(0, 237)
+        Me.dgvTabla.Name = "dgvTabla"
+        Me.dgvTabla.Size = New System.Drawing.Size(885, 284)
+        Me.dgvTabla.TabIndex = 8
         '
-        'Label6
+        'txtInicioCaja
         '
-        Me.Label6.BackColor = System.Drawing.Color.LightBlue
-        Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Blue
-        Me.Label6.Location = New System.Drawing.Point(163, 63)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(174, 28)
-        Me.Label6.TabIndex = 9
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtInicioCaja.BackColor = System.Drawing.Color.LightBlue
+        Me.txtInicioCaja.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInicioCaja.ForeColor = System.Drawing.Color.Blue
+        Me.txtInicioCaja.Location = New System.Drawing.Point(163, 63)
+        Me.txtInicioCaja.Name = "txtInicioCaja"
+        Me.txtInicioCaja.Size = New System.Drawing.Size(174, 28)
+        Me.txtInicioCaja.TabIndex = 9
+        Me.txtInicioCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label7
+        'txtVentasdia
         '
-        Me.Label7.BackColor = System.Drawing.Color.LightGreen
-        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.Blue
-        Me.Label7.Location = New System.Drawing.Point(516, 63)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(174, 28)
-        Me.Label7.TabIndex = 10
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtVentasdia.BackColor = System.Drawing.Color.LightGreen
+        Me.txtVentasdia.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtVentasdia.ForeColor = System.Drawing.Color.Blue
+        Me.txtVentasdia.Location = New System.Drawing.Point(516, 63)
+        Me.txtVentasdia.Name = "txtVentasdia"
+        Me.txtVentasdia.Size = New System.Drawing.Size(174, 28)
+        Me.txtVentasdia.TabIndex = 10
+        Me.txtVentasdia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label8
+        'txtTotalCaja
         '
-        Me.Label8.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.Label8.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(163, 135)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(174, 28)
-        Me.Label8.TabIndex = 11
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtTotalCaja.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtTotalCaja.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotalCaja.ForeColor = System.Drawing.Color.White
+        Me.txtTotalCaja.Location = New System.Drawing.Point(163, 135)
+        Me.txtTotalCaja.Name = "txtTotalCaja"
+        Me.txtTotalCaja.Size = New System.Drawing.Size(174, 28)
+        Me.txtTotalCaja.TabIndex = 11
+        Me.txtTotalCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
+        'btnImprimir
         '
-        Me.Button1.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(575, 130)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(115, 33)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Imprimir"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnImprimir.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.btnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImprimir.ForeColor = System.Drawing.Color.White
+        Me.btnImprimir.Location = New System.Drawing.Point(575, 130)
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.Size = New System.Drawing.Size(115, 33)
+        Me.btnImprimir.TabIndex = 12
+        Me.btnImprimir.Text = "Imprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = False
         '
-        'Label9
+        'txtEgresoCaja
         '
-        Me.Label9.BackColor = System.Drawing.Color.Coral
-        Me.Label9.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(163, 98)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(174, 28)
-        Me.Label9.TabIndex = 15
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtEgresoCaja.BackColor = System.Drawing.Color.Coral
+        Me.txtEgresoCaja.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtEgresoCaja.ForeColor = System.Drawing.Color.White
+        Me.txtEgresoCaja.Location = New System.Drawing.Point(163, 98)
+        Me.txtEgresoCaja.Name = "txtEgresoCaja"
+        Me.txtEgresoCaja.Size = New System.Drawing.Size(174, 28)
+        Me.txtEgresoCaja.TabIndex = 15
+        Me.txtEgresoCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label10
         '
@@ -169,13 +169,13 @@ Partial Class GUI_Caja_Corte
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
         Me.ClientSize = New System.Drawing.Size(885, 521)
-        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.txtEgresoCaja)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.btnImprimir)
+        Me.Controls.Add(Me.txtTotalCaja)
+        Me.Controls.Add(Me.txtVentasdia)
+        Me.Controls.Add(Me.txtInicioCaja)
+        Me.Controls.Add(Me.dgvTabla)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -185,7 +185,7 @@ Partial Class GUI_Caja_Corte
         Me.Margin = New System.Windows.Forms.Padding(6, 5, 6, 5)
         Me.Name = "GUI_Caja_Corte"
         Me.Text = "Corte de caja"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -196,11 +196,11 @@ Partial Class GUI_Caja_Corte
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Label9 As Label
+    Friend WithEvents dgvTabla As DataGridView
+    Friend WithEvents txtInicioCaja As Label
+    Friend WithEvents txtVentasdia As Label
+    Friend WithEvents txtTotalCaja As Label
+    Friend WithEvents btnImprimir As Button
+    Friend WithEvents txtEgresoCaja As Label
     Friend WithEvents Label10 As Label
 End Class

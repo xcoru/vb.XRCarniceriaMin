@@ -25,15 +25,15 @@ Partial Class GUI_Config
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtTelefono = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtLogotipo = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtImpresora = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -71,19 +71,19 @@ Partial Class GUI_Config
         Me.Label3.Text = "Nombre"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(22, 173)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(304, 35)
-        Me.TextBox1.TabIndex = 5
+        Me.txtNombre.Location = New System.Drawing.Point(22, 173)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(304, 35)
+        Me.txtNombre.TabIndex = 5
         '
-        'TextBox2
+        'txtDireccion
         '
-        Me.TextBox2.Location = New System.Drawing.Point(348, 173)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(304, 35)
-        Me.TextBox2.TabIndex = 7
+        Me.txtDireccion.Location = New System.Drawing.Point(348, 173)
+        Me.txtDireccion.Name = "txtDireccion"
+        Me.txtDireccion.Size = New System.Drawing.Size(304, 35)
+        Me.txtDireccion.TabIndex = 7
         '
         'Label4
         '
@@ -95,12 +95,12 @@ Partial Class GUI_Config
         Me.Label4.Text = "Dirección"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox3
+        'txtTelefono
         '
-        Me.TextBox3.Location = New System.Drawing.Point(22, 262)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(177, 35)
-        Me.TextBox3.TabIndex = 9
+        Me.txtTelefono.Location = New System.Drawing.Point(22, 262)
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(177, 35)
+        Me.txtTelefono.TabIndex = 9
         '
         'Label5
         '
@@ -112,13 +112,13 @@ Partial Class GUI_Config
         Me.Label5.Text = "Telefono"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox4
+        'txtLogotipo
         '
-        Me.TextBox4.Location = New System.Drawing.Point(235, 262)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(361, 35)
-        Me.TextBox4.TabIndex = 11
+        Me.txtLogotipo.Location = New System.Drawing.Point(235, 262)
+        Me.txtLogotipo.Name = "txtLogotipo"
+        Me.txtLogotipo.ReadOnly = True
+        Me.txtLogotipo.Size = New System.Drawing.Size(361, 35)
+        Me.txtLogotipo.TabIndex = 11
         '
         'Label6
         '
@@ -141,12 +141,13 @@ Partial Class GUI_Config
         Me.Button1.Text = ">>"
         Me.Button1.UseVisualStyleBackColor = False
         '
-        'TextBox5
+        'txtImpresora
         '
-        Me.TextBox5.Location = New System.Drawing.Point(179, 413)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(278, 35)
-        Me.TextBox5.TabIndex = 14
+        Me.txtImpresora.Location = New System.Drawing.Point(179, 413)
+        Me.txtImpresora.Name = "txtImpresora"
+        Me.txtImpresora.ReadOnly = True
+        Me.txtImpresora.Size = New System.Drawing.Size(278, 35)
+        Me.txtImpresora.TabIndex = 14
         '
         'Label7
         '
@@ -189,16 +190,16 @@ Partial Class GUI_Config
         Me.ClientSize = New System.Drawing.Size(674, 526)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtImpresora)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtLogotipo)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtDireccion)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -218,15 +219,15 @@ Partial Class GUI_Config
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtNombre As TextBox
+    Friend WithEvents txtDireccion As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtTelefono As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtLogotipo As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtImpresora As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button

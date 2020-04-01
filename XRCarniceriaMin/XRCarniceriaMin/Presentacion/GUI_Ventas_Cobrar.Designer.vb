@@ -26,12 +26,12 @@ Partial Class GUI_Ventas_Cobrar
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.txtTotal = New System.Windows.Forms.Label()
+        Me.txtCambio = New System.Windows.Forms.Label()
+        Me.txtEfectivo = New System.Windows.Forms.TextBox()
+        Me.btnCobrar = New System.Windows.Forms.Button()
+        Me.txtTicket = New System.Windows.Forms.CheckBox()
+        Me.btnCancelar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -74,68 +74,68 @@ Partial Class GUI_Ventas_Cobrar
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Cambio:"
         '
-        'Label5
+        'txtTotal
         '
-        Me.Label5.BackColor = System.Drawing.Color.LightYellow
-        Me.Label5.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(121, 77)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(175, 40)
-        Me.Label5.TabIndex = 6
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtTotal.BackColor = System.Drawing.Color.LightYellow
+        Me.txtTotal.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotal.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtTotal.Location = New System.Drawing.Point(121, 77)
+        Me.txtTotal.Name = "txtTotal"
+        Me.txtTotal.Size = New System.Drawing.Size(175, 40)
+        Me.txtTotal.TabIndex = 6
+        Me.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label6
+        'txtCambio
         '
-        Me.Label6.BackColor = System.Drawing.Color.MintCream
-        Me.Label6.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.Blue
-        Me.Label6.Location = New System.Drawing.Point(121, 173)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(175, 42)
-        Me.Label6.TabIndex = 7
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtCambio.BackColor = System.Drawing.Color.MintCream
+        Me.txtCambio.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtCambio.ForeColor = System.Drawing.Color.Blue
+        Me.txtCambio.Location = New System.Drawing.Point(121, 173)
+        Me.txtCambio.Name = "txtCambio"
+        Me.txtCambio.Size = New System.Drawing.Size(175, 42)
+        Me.txtCambio.TabIndex = 7
+        Me.txtCambio.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox1
+        'txtEfectivo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(121, 128)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(175, 35)
-        Me.TextBox1.TabIndex = 8
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtEfectivo.Location = New System.Drawing.Point(121, 128)
+        Me.txtEfectivo.Name = "txtEfectivo"
+        Me.txtEfectivo.Size = New System.Drawing.Size(175, 35)
+        Me.txtEfectivo.TabIndex = 8
+        Me.txtEfectivo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Button1
+        'btnCobrar
         '
-        Me.Button1.BackColor = System.Drawing.Color.LightGreen
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(170, 285)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(126, 43)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Cobrar"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnCobrar.BackColor = System.Drawing.Color.LightGreen
+        Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCobrar.Location = New System.Drawing.Point(170, 285)
+        Me.btnCobrar.Name = "btnCobrar"
+        Me.btnCobrar.Size = New System.Drawing.Size(126, 43)
+        Me.btnCobrar.TabIndex = 9
+        Me.btnCobrar.Text = "Cobrar"
+        Me.btnCobrar.UseVisualStyleBackColor = False
         '
-        'CheckBox1
+        'txtTicket
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.ForeColor = System.Drawing.Color.Gray
-        Me.CheckBox1.Location = New System.Drawing.Point(203, 233)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(93, 31)
-        Me.CheckBox1.TabIndex = 10
-        Me.CheckBox1.Text = "Ticket"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.txtTicket.AutoSize = True
+        Me.txtTicket.ForeColor = System.Drawing.Color.Gray
+        Me.txtTicket.Location = New System.Drawing.Point(203, 233)
+        Me.txtTicket.Name = "txtTicket"
+        Me.txtTicket.Size = New System.Drawing.Size(93, 31)
+        Me.txtTicket.TabIndex = 10
+        Me.txtTicket.Text = "Ticket"
+        Me.txtTicket.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCancelar
         '
-        Me.Button2.BackColor = System.Drawing.Color.MistyRose
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(17, 285)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(126, 43)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnCancelar.BackColor = System.Drawing.Color.MistyRose
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Location = New System.Drawing.Point(17, 285)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(126, 43)
+        Me.btnCancelar.TabIndex = 11
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'GUI_Ventas_Cobrar
         '
@@ -143,12 +143,12 @@ Partial Class GUI_Ventas_Cobrar
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
         Me.ClientSize = New System.Drawing.Size(315, 340)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.txtTicket)
+        Me.Controls.Add(Me.btnCobrar)
+        Me.Controls.Add(Me.txtEfectivo)
+        Me.Controls.Add(Me.txtCambio)
+        Me.Controls.Add(Me.txtTotal)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -168,10 +168,10 @@ Partial Class GUI_Ventas_Cobrar
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents txtTotal As Label
+    Friend WithEvents txtCambio As Label
+    Friend WithEvents txtEfectivo As TextBox
+    Friend WithEvents btnCobrar As Button
+    Friend WithEvents txtTicket As CheckBox
+    Friend WithEvents btnCancelar As Button
 End Class
