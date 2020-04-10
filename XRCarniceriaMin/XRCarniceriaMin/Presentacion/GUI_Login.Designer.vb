@@ -28,6 +28,7 @@ Partial Class GUI_Login
         Me.txtUsuario = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnEntrar = New System.Windows.Forms.Button()
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -68,23 +69,25 @@ Partial Class GUI_Login
         'txtUsuario
         '
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtUsuario.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsuario.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUsuario.ForeColor = System.Drawing.Color.DodgerBlue
         Me.txtUsuario.Location = New System.Drawing.Point(25, 131)
         Me.txtUsuario.MaxLength = 20
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(284, 28)
+        Me.txtUsuario.Size = New System.Drawing.Size(284, 32)
         Me.txtUsuario.TabIndex = 3
         Me.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtPassword
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtPassword.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPassword.ForeColor = System.Drawing.Color.DodgerBlue
         Me.txtPassword.Location = New System.Drawing.Point(25, 213)
         Me.txtPassword.MaxLength = 20
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(284, 28)
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(111)
+        Me.txtPassword.Size = New System.Drawing.Size(284, 32)
         Me.txtPassword.TabIndex = 4
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -102,11 +105,25 @@ Partial Class GUI_Login
         Me.btnEntrar.Text = "Entrar"
         Me.btnEntrar.UseVisualStyleBackColor = False
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.BackColor = System.Drawing.Color.Tomato
+        Me.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCerrar.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.ForeColor = System.Drawing.Color.White
+        Me.btnCerrar.Location = New System.Drawing.Point(294, 1)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(40, 40)
+        Me.btnCerrar.TabIndex = 6
+        Me.btnCerrar.Text = "X"
+        Me.btnCerrar.UseVisualStyleBackColor = False
+        '
         'GUI_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(335, 321)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.btnEntrar)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtUsuario)
@@ -128,4 +145,5 @@ Partial Class GUI_Login
     Friend WithEvents txtUsuario As TextBox
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnEntrar As Button
+    Friend WithEvents btnCerrar As Button
 End Class

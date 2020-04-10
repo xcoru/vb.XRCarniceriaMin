@@ -10,7 +10,7 @@
     Public _usuario_nombre As String = ""
 #End Region
 #Region "Negocio"
-    Public _negocio_nombre As String = ""
+    Public _negocio_nombre As String = "Carniceria"
     Public _negocio_descripcion As String = ""
     Public _negocio_direccion As String = ""
     Public _negocio_telefono As String = ""

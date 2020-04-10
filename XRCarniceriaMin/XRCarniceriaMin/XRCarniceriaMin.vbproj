@@ -80,6 +80,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuracion\FP.vb" />
     <Compile Include="Configuracion\VP.vb" />
     <Compile Include="Datos\D_Catalogo.vb" />
     <Compile Include="Datos\D_Config.vb" />
