@@ -76,7 +76,7 @@ ENGINE = InnoDB;
 -- Table `xrcarniceriamin`.`config`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`config` (
-  `id_config` INT NOT NULL AUTO_INCREMENT,
+  `id_config` INT NOT NULL,
   `impresora` VARCHAR(120) NULL,
   PRIMARY KEY (`id_config`))
 ENGINE = InnoDB;
