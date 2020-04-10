@@ -7,7 +7,6 @@ Public Class D_Ventas
 
     '--Modificar lo de abajo ******************************************************
     Dim Tabla As String = "ventas"
-    Dim Negocio As String = "Carniceria"
 
 
     'Inserta un articulo en la base de datos
@@ -29,21 +28,21 @@ Public Class D_Ventas
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id_ven", MySqlDbType.UInt32).Value = _Elemento.Id_venta
-                .Add("fol", MySqlDbType.VarChar).Value = _Elemento.Folio
-                .Add("id_usu", MySqlDbType.VarChar).Value = _Elemento.Id_usuario
-                .Add("id_cat", MySqlDbType.VarChar).Value = _Elemento.Id_catalogo
-                .Add("can", MySqlDbType.Int32).Value = _Elemento.Cantidad
-                .Add("pes", MySqlDbType.Decimal).Value = _Elemento.Peso
-                .Add("pre", MySqlDbType.Decimal).Value = _Elemento.Precio
-                .Add("tot", MySqlDbType.Decimal).Value = _Elemento.Total
-                .Add("hor", MySqlDbType.VarChar).Value = _Elemento.Hora
-                .Add("fec", MySqlDbType.Date).Value = _Elemento.Fecha
-                .Add("est", MySqlDbType.Int32).Value = _Elemento.Estado
+                .Add("campo1", MySqlDbType.UInt32).Value = _Elemento.Id_venta
+                .Add("campo2", MySqlDbType.VarChar).Value = _Elemento.Folio
+                .Add("campo3", MySqlDbType.VarChar).Value = _Elemento.Id_usuario
+                .Add("campo4", MySqlDbType.VarChar).Value = _Elemento.Id_catalogo
+                .Add("campo5", MySqlDbType.Int32).Value = _Elemento.Cantidad
+                .Add("campo6", MySqlDbType.Decimal).Value = _Elemento.Peso
+                .Add("campo7", MySqlDbType.Decimal).Value = _Elemento.Precio
+                .Add("campo8", MySqlDbType.Decimal).Value = _Elemento.Total
+                .Add("campo9", MySqlDbType.VarChar).Value = _Elemento.Hora
+                .Add("campo10", MySqlDbType.Date).Value = _Elemento.Fecha
+                .Add("campo11", MySqlDbType.Int32).Value = _Elemento.Estado
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception
-            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, Negocio)
+            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, _negocio_nombre)
         End Try
 
         Return Estado
@@ -92,7 +91,7 @@ Public Class D_Ventas
     'Elimina un articulo especificado
     Public Sub Eliminar(ByVal ID As String)
         QueryC("CALL " & Tabla & "_eliminar('" & ID & "')")
-        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, Negocio)
+        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, _negocio_nombre)
     End Sub
 
     'Devuelve los primeros 5 registros que coinciden con el filtro/busqueda
@@ -114,7 +113,7 @@ Public Class D_Ventas
             Return ds
             ds.Dispose()
         Catch ex As Exception
-            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, Negocio)
+            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, _negocio_nombre)
             Return Nothing
         End Try
 

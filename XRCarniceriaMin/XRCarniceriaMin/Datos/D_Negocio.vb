@@ -7,7 +7,6 @@ Public Class D_Negocio
 
     '--Modificar lo de abajo ******************************************************
     Dim Tabla As String = "negocio"
-    Dim Negocio As String = "Carniceria"
 
 
     'Inserta un articulo en la base de datos
@@ -38,7 +37,7 @@ Public Class D_Negocio
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception
-            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, Negocio)
+            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, _negocio_nombre)
         End Try
 
         Return Estado
@@ -87,7 +86,7 @@ Public Class D_Negocio
     'Elimina un articulo especificado
     Public Sub Eliminar(ByVal ID As String)
         QueryC("CALL " & Tabla & "_eliminar('" & ID & "')")
-        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, Negocio)
+        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, _negocio_nombre)
     End Sub
 
     'Devuelve los primeros 5 registros que coinciden con el filtro/busqueda
@@ -109,7 +108,7 @@ Public Class D_Negocio
             Return ds
             ds.Dispose()
         Catch ex As Exception
-            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, Negocio)
+            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, _negocio_nombre)
             Return Nothing
         End Try
 

@@ -69,9 +69,10 @@ Partial Class GUI_Login
         '
         Me.txtUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtUsuario.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuario.Location = New System.Drawing.Point(12, 131)
+        Me.txtUsuario.Location = New System.Drawing.Point(25, 131)
+        Me.txtUsuario.MaxLength = 20
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(311, 28)
+        Me.txtUsuario.Size = New System.Drawing.Size(284, 28)
         Me.txtUsuario.TabIndex = 3
         Me.txtUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
@@ -79,10 +80,11 @@ Partial Class GUI_Login
         '
         Me.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtPassword.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPassword.Location = New System.Drawing.Point(13, 213)
+        Me.txtPassword.Location = New System.Drawing.Point(25, 213)
+        Me.txtPassword.MaxLength = 20
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(311, 28)
+        Me.txtPassword.Size = New System.Drawing.Size(284, 28)
         Me.txtPassword.TabIndex = 4
         Me.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '

@@ -3,12 +3,9 @@ Public Class D_Catalogo
     Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
-    Dim Comando As New MySqlCommand
 
     '--Modificar lo de abajo ******************************************************
     Dim Tabla As String = "catalogo"
-    Dim Negocio As String = "Carniceria"
-
 
     'Inserta un articulo en la base de datos
     Public Function Insertar(ByVal _Elemento As I_Catalogo) As Boolean
@@ -37,7 +34,7 @@ Public Class D_Catalogo
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception
-            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, Negocio)
+            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, _negocio_nombre)
         End Try
 
         Return Estado
@@ -86,7 +83,7 @@ Public Class D_Catalogo
     'Elimina un articulo especificado
     Public Sub Eliminar(ByVal ID As String)
         QueryC("CALL " & Tabla & "_eliminar('" & ID & "')")
-        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, Negocio)
+        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, _negocio_nombre)
     End Sub
 
     'Devuelve los primeros 5 registros que coinciden con el filtro/busqueda
@@ -108,7 +105,7 @@ Public Class D_Catalogo
             Return ds
             ds.Dispose()
         Catch ex As Exception
-            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, negocio)
+            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, _negocio_nombre)
             Return Nothing
         End Try
 

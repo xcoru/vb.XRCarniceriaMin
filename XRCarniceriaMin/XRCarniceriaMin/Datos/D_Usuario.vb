@@ -7,7 +7,6 @@ Public Class D_Usuario
 
     '--Modificar lo de abajo ******************************************************
     Dim Tabla As String = "usuario"
-    Dim Negocio As String = "Carniceria"
 
 
     'Inserta un articulo en la base de datos
@@ -36,7 +35,7 @@ Public Class D_Usuario
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception
-            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, Negocio)
+            MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, _negocio_nombre)
         End Try
 
         Return Estado
@@ -51,6 +50,11 @@ Public Class D_Usuario
     'Devuelve la consulta de un articulo en especifico
     Public Function Consulta(ByVal ID As String) As DataSet
         Return QueryC("CALL " & Tabla & "_consultar('" & ID & "')")
+    End Function
+
+    'Devuelve la consulta de un articulo en especifico
+    Public Function Login(ByVal ID As String, ByVal Pass As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_login('" & ID & "','" & Pass & "')")
     End Function
 
     'Devuelve el primer articulo que aparece en la tabla de articulos
@@ -85,7 +89,7 @@ Public Class D_Usuario
     'Elimina un articulo especificado
     Public Sub Eliminar(ByVal ID As String)
         QueryC("CALL " & Tabla & "_eliminar('" & ID & "')")
-        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, Negocio)
+        MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, _negocio_nombre)
     End Sub
 
     'Devuelve los primeros 5 registros que coinciden con el filtro/busqueda
@@ -107,7 +111,7 @@ Public Class D_Usuario
             Return ds
             ds.Dispose()
         Catch ex As Exception
-            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, Negocio)
+            MsgBox("¡Error al intentar conectarse a la base de datos! : " + ex.ToString, vbOKOnly + vbCritical, _negocio_nombre)
             Return Nothing
         End Try
 

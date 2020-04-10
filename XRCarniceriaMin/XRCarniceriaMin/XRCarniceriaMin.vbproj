@@ -47,6 +47,9 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>LOGO_Libersoft_Oficial 2 - 90x90.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=8.0.19.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -77,6 +80,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuracion\VP.vb" />
     <Compile Include="Datos\D_Catalogo.vb" />
     <Compile Include="Datos\D_Config.vb" />
     <Compile Include="Datos\Conexion.vb" />
@@ -202,6 +206,9 @@
       <Project>{9cd6b19f-7081-41c5-9d5b-14ffae70469c}</Project>
       <Name>Libersoft</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LOGO_Libersoft_Oficial 2 - 90x90.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

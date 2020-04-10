@@ -147,6 +147,21 @@ CREATE PROCEDURE usuario_consultar(IN id_ VARCHAR(20))
 DELIMITER ;
 
 
+DROP PROCEDURE IF EXISTS usuario_login;
+ DELIMITER //
+CREATE PROCEDURE usuario_login(IN id_ VARCHAR(20), IN pass_ VARCHAR(20))
+   BEGIN
+		SELECT 
+			id_usuario		AS	 'Usuario',
+			nombre			AS	 'Nombre',
+			password 		AS	 'Contraseña',
+			estado 			AS	 'Estado'
+		FROM usuario 
+        WHERE id_usuario = id_ AND password=pass_;
+   END //
+DELIMITER ;
+
+
 DROP PROCEDURE IF EXISTS usuario_insertar;
  DELIMITER //
 CREATE PROCEDURE usuario_insertar(
