@@ -125,10 +125,11 @@ Partial Class GUI_Config
         'txtLogotipo
         '
         Me.txtLogotipo.BackColor = System.Drawing.Color.Lavender
-        Me.txtLogotipo.Location = New System.Drawing.Point(293, 262)
+        Me.txtLogotipo.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtLogotipo.Location = New System.Drawing.Point(293, 265)
         Me.txtLogotipo.Name = "txtLogotipo"
         Me.txtLogotipo.ReadOnly = True
-        Me.txtLogotipo.Size = New System.Drawing.Size(303, 35)
+        Me.txtLogotipo.Size = New System.Drawing.Size(303, 29)
         Me.txtLogotipo.TabIndex = 11
         '
         'Label6
@@ -155,10 +156,11 @@ Partial Class GUI_Config
         'txtImpresora
         '
         Me.txtImpresora.BackColor = System.Drawing.Color.White
-        Me.txtImpresora.Location = New System.Drawing.Point(22, 426)
+        Me.txtImpresora.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtImpresora.Location = New System.Drawing.Point(22, 428)
         Me.txtImpresora.Name = "txtImpresora"
         Me.txtImpresora.ReadOnly = True
-        Me.txtImpresora.Size = New System.Drawing.Size(189, 35)
+        Me.txtImpresora.Size = New System.Drawing.Size(189, 29)
         Me.txtImpresora.TabIndex = 14
         '
         'Label7
