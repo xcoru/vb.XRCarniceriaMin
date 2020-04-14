@@ -37,7 +37,10 @@ Partial Class GUI_Config
         Me.txtImpresora = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.imgLogoTipo = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        CType(Me.imgLogoTipo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -56,9 +59,10 @@ Partial Class GUI_Config
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(200, 78)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(278, 27)
+        Me.Label2.Size = New System.Drawing.Size(302, 29)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Información del Negocio:"
         '
@@ -67,7 +71,7 @@ Partial Class GUI_Config
         Me.Label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label3.Location = New System.Drawing.Point(22, 143)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(304, 27)
+        Me.Label3.Size = New System.Drawing.Size(245, 27)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nombre"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -76,22 +80,22 @@ Partial Class GUI_Config
         '
         Me.txtNombre.Location = New System.Drawing.Point(22, 173)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(304, 35)
+        Me.txtNombre.Size = New System.Drawing.Size(245, 35)
         Me.txtNombre.TabIndex = 5
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(348, 173)
+        Me.txtDireccion.Location = New System.Drawing.Point(290, 173)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(304, 35)
+        Me.txtDireccion.Size = New System.Drawing.Size(362, 35)
         Me.txtDireccion.TabIndex = 7
         '
         'Label4
         '
         Me.Label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label4.Location = New System.Drawing.Point(348, 143)
+        Me.Label4.Location = New System.Drawing.Point(290, 143)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(304, 27)
+        Me.Label4.Size = New System.Drawing.Size(362, 27)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Dirección"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -100,33 +104,34 @@ Partial Class GUI_Config
         '
         Me.txtTelefono.Location = New System.Drawing.Point(22, 262)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(177, 35)
+        Me.txtTelefono.Size = New System.Drawing.Size(245, 35)
         Me.txtTelefono.TabIndex = 9
         '
         'Label5
         '
         Me.Label5.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label5.Location = New System.Drawing.Point(17, 232)
+        Me.Label5.Location = New System.Drawing.Point(22, 232)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(182, 27)
+        Me.Label5.Size = New System.Drawing.Size(245, 27)
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Telefono"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtLogotipo
         '
-        Me.txtLogotipo.Location = New System.Drawing.Point(235, 262)
+        Me.txtLogotipo.BackColor = System.Drawing.Color.Lavender
+        Me.txtLogotipo.Location = New System.Drawing.Point(293, 262)
         Me.txtLogotipo.Name = "txtLogotipo"
         Me.txtLogotipo.ReadOnly = True
-        Me.txtLogotipo.Size = New System.Drawing.Size(361, 35)
+        Me.txtLogotipo.Size = New System.Drawing.Size(303, 35)
         Me.txtLogotipo.TabIndex = 11
         '
         'Label6
         '
         Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label6.Location = New System.Drawing.Point(215, 232)
+        Me.Label6.Location = New System.Drawing.Point(294, 232)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(387, 27)
+        Me.Label6.Size = New System.Drawing.Size(358, 27)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "Logotipo"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -135,7 +140,7 @@ Partial Class GUI_Config
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(463, 413)
+        Me.Button1.Location = New System.Drawing.Point(217, 425)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(50, 35)
         Me.Button1.TabIndex = 12
@@ -144,18 +149,19 @@ Partial Class GUI_Config
         '
         'txtImpresora
         '
-        Me.txtImpresora.Location = New System.Drawing.Point(179, 413)
+        Me.txtImpresora.BackColor = System.Drawing.Color.White
+        Me.txtImpresora.Location = New System.Drawing.Point(22, 426)
         Me.txtImpresora.Name = "txtImpresora"
         Me.txtImpresora.ReadOnly = True
-        Me.txtImpresora.Size = New System.Drawing.Size(278, 35)
+        Me.txtImpresora.Size = New System.Drawing.Size(189, 35)
         Me.txtImpresora.TabIndex = 14
         '
         'Label7
         '
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Label7.Location = New System.Drawing.Point(179, 383)
+        Me.Label7.Location = New System.Drawing.Point(22, 396)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(334, 27)
+        Me.Label7.Size = New System.Drawing.Size(245, 27)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Impresora"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -164,32 +170,57 @@ Partial Class GUI_Config
         '
         Me.Button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(602, 261)
+        Me.Button2.Location = New System.Drawing.Point(602, 262)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(50, 35)
         Me.Button2.TabIndex = 15
         Me.Button2.Text = ">>"
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'btnGuardar
+        '
+        Me.btnGuardar.BackColor = System.Drawing.Color.LimeGreen
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.ForeColor = System.Drawing.Color.White
+        Me.btnGuardar.Location = New System.Drawing.Point(472, 492)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(179, 44)
+        Me.btnGuardar.TabIndex = 16
+        Me.btnGuardar.Text = "Guardar"
+        Me.btnGuardar.UseVisualStyleBackColor = False
+        '
+        'imgLogoTipo
+        '
+        Me.imgLogoTipo.BackColor = System.Drawing.Color.Lavender
+        Me.imgLogoTipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.imgLogoTipo.Location = New System.Drawing.Point(296, 305)
+        Me.imgLogoTipo.Name = "imgLogoTipo"
+        Me.imgLogoTipo.Size = New System.Drawing.Size(356, 157)
+        Me.imgLogoTipo.TabIndex = 17
+        Me.imgLogoTipo.TabStop = False
+        '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.LimeGreen
+        Me.Button3.BackColor = System.Drawing.Color.Tomato
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(248, 470)
+        Me.Button3.Location = New System.Drawing.Point(275, 492)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(179, 44)
-        Me.Button3.TabIndex = 16
-        Me.Button3.Text = "Guardar"
+        Me.Button3.TabIndex = 18
+        Me.Button3.Text = "Atras"
         Me.Button3.UseVisualStyleBackColor = False
         '
         'GUI_Config
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(674, 526)
+        Me.ClientSize = New System.Drawing.Size(674, 544)
         Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.imgLogoTipo)
+        Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.txtImpresora)
         Me.Controls.Add(Me.Label7)
@@ -213,6 +244,7 @@ Partial Class GUI_Config
         Me.Name = "GUI_Config"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Configuraciones"
+        CType(Me.imgLogoTipo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -232,5 +264,7 @@ Partial Class GUI_Config
     Friend WithEvents txtImpresora As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents imgLogoTipo As PictureBox
     Friend WithEvents Button3 As Button
 End Class

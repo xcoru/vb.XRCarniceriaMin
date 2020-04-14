@@ -71,7 +71,7 @@ Partial Class GUI_Articulos
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(782, 222)
+        Me.Panel1.Size = New System.Drawing.Size(782, 234)
         Me.Panel1.TabIndex = 2
         '
         'FlowLayoutPanel1
@@ -87,7 +87,7 @@ Partial Class GUI_Articulos
         Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(10)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Padding = New System.Windows.Forms.Padding(10)
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(782, 178)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(782, 190)
         Me.FlowLayoutPanel1.TabIndex = 4
         '
         'Panel3
@@ -97,22 +97,22 @@ Partial Class GUI_Articulos
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Location = New System.Drawing.Point(13, 13)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(217, 72)
+        Me.Panel3.Size = New System.Drawing.Size(217, 78)
         Me.Panel3.TabIndex = 5
         '
         'txtClaveProducto
         '
-        Me.txtClaveProducto.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtClaveProducto.Location = New System.Drawing.Point(4, 38)
+        Me.txtClaveProducto.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtClaveProducto.Location = New System.Drawing.Point(4, 39)
         Me.txtClaveProducto.Name = "txtClaveProducto"
-        Me.txtClaveProducto.Size = New System.Drawing.Size(210, 29)
+        Me.txtClaveProducto.Size = New System.Drawing.Size(210, 35)
         Me.txtClaveProducto.TabIndex = 4
         '
         'Label2
         '
         Me.Label2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Label2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label2.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(0, 0)
         Me.Label2.Name = "Label2"
@@ -128,22 +128,22 @@ Partial Class GUI_Articulos
         Me.Panel4.Controls.Add(Me.Label3)
         Me.Panel4.Location = New System.Drawing.Point(236, 13)
         Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(314, 72)
+        Me.Panel4.Size = New System.Drawing.Size(314, 78)
         Me.Panel4.TabIndex = 6
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtDescripcion.Location = New System.Drawing.Point(4, 38)
+        Me.txtDescripcion.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtDescripcion.Location = New System.Drawing.Point(4, 39)
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(307, 29)
+        Me.txtDescripcion.Size = New System.Drawing.Size(307, 35)
         Me.txtDescripcion.TabIndex = 4
         '
         'Label3
         '
         Me.Label3.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Label3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label3.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(0, 0)
         Me.Label3.Name = "Label3"
@@ -157,26 +157,26 @@ Partial Class GUI_Articulos
         Me.Panel5.BackColor = System.Drawing.Color.AliceBlue
         Me.Panel5.Controls.Add(Me.txtTipo)
         Me.Panel5.Controls.Add(Me.Label4)
-        Me.Panel5.Location = New System.Drawing.Point(13, 91)
+        Me.Panel5.Location = New System.Drawing.Point(13, 97)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(217, 72)
+        Me.Panel5.Size = New System.Drawing.Size(217, 78)
         Me.Panel5.TabIndex = 7
         '
         'txtTipo
         '
-        Me.txtTipo.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipo.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTipo.FormattingEnabled = True
         Me.txtTipo.Items.AddRange(New Object() {"Pieza", "Kg"})
-        Me.txtTipo.Location = New System.Drawing.Point(4, 38)
+        Me.txtTipo.Location = New System.Drawing.Point(4, 39)
         Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(210, 30)
+        Me.txtTipo.Size = New System.Drawing.Size(210, 35)
         Me.txtTipo.TabIndex = 4
         '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Label4.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label4.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(0, 0)
         Me.Label4.Name = "Label4"
@@ -190,24 +190,24 @@ Partial Class GUI_Articulos
         Me.Panel6.BackColor = System.Drawing.Color.AliceBlue
         Me.Panel6.Controls.Add(Me.txtPrecio)
         Me.Panel6.Controls.Add(Me.Label5)
-        Me.Panel6.Location = New System.Drawing.Point(236, 91)
+        Me.Panel6.Location = New System.Drawing.Point(236, 97)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(217, 72)
+        Me.Panel6.Size = New System.Drawing.Size(217, 78)
         Me.Panel6.TabIndex = 8
         '
         'txtPrecio
         '
-        Me.txtPrecio.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPrecio.Location = New System.Drawing.Point(4, 38)
+        Me.txtPrecio.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPrecio.Location = New System.Drawing.Point(4, 39)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(210, 29)
+        Me.txtPrecio.Size = New System.Drawing.Size(210, 35)
         Me.txtPrecio.TabIndex = 4
         '
         'Label5
         '
         Me.Label5.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Label5.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label5.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(0, 0)
         Me.Label5.Name = "Label5"
@@ -218,10 +218,10 @@ Partial Class GUI_Articulos
         '
         'Panel7
         '
-        Me.Panel7.BackColor = System.Drawing.Color.SteelBlue
+        Me.Panel7.BackColor = System.Drawing.Color.AliceBlue
         Me.Panel7.Controls.Add(Me.btnEliminar)
         Me.Panel7.Controls.Add(Me.btnGuardar)
-        Me.Panel7.Location = New System.Drawing.Point(459, 91)
+        Me.Panel7.Location = New System.Drawing.Point(459, 97)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(217, 72)
         Me.Panel7.TabIndex = 9
@@ -230,7 +230,7 @@ Partial Class GUI_Articulos
         '
         Me.btnEliminar.BackColor = System.Drawing.Color.Tomato
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnEliminar.Location = New System.Drawing.Point(4, 37)
         Me.btnEliminar.Name = "btnEliminar"
@@ -243,7 +243,7 @@ Partial Class GUI_Articulos
         '
         Me.btnGuardar.BackColor = System.Drawing.Color.LimeGreen
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnGuardar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btnGuardar.Location = New System.Drawing.Point(4, 3)
         Me.btnGuardar.Name = "btnGuardar"
@@ -270,9 +270,9 @@ Partial Class GUI_Articulos
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.dgvTabla)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(0, 222)
+        Me.Panel2.Location = New System.Drawing.Point(0, 234)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(782, 340)
+        Me.Panel2.Size = New System.Drawing.Size(782, 328)
         Me.Panel2.TabIndex = 3
         '
         'dgvTabla
@@ -314,7 +314,7 @@ Partial Class GUI_Articulos
         Me.dgvTabla.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvTabla.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTabla.Size = New System.Drawing.Size(782, 340)
+        Me.dgvTabla.Size = New System.Drawing.Size(782, 328)
         Me.dgvTabla.TabIndex = 0
         '
         'Column1

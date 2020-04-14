@@ -60,7 +60,7 @@ Partial Class GUI_Ventas_Cobrar
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 131)
+        Me.Label3.Location = New System.Drawing.Point(12, 125)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(103, 27)
         Me.Label3.TabIndex = 4
@@ -69,7 +69,7 @@ Partial Class GUI_Ventas_Cobrar
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(14, 182)
+        Me.Label4.Location = New System.Drawing.Point(14, 170)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 27)
         Me.Label4.TabIndex = 5
@@ -91,7 +91,7 @@ Partial Class GUI_Ventas_Cobrar
         Me.txtCambio.BackColor = System.Drawing.Color.MintCream
         Me.txtCambio.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCambio.ForeColor = System.Drawing.Color.Blue
-        Me.txtCambio.Location = New System.Drawing.Point(121, 173)
+        Me.txtCambio.Location = New System.Drawing.Point(121, 161)
         Me.txtCambio.Name = "txtCambio"
         Me.txtCambio.Size = New System.Drawing.Size(175, 42)
         Me.txtCambio.TabIndex = 7
@@ -99,7 +99,7 @@ Partial Class GUI_Ventas_Cobrar
         '
         'txtEfectivo
         '
-        Me.txtEfectivo.Location = New System.Drawing.Point(121, 128)
+        Me.txtEfectivo.Location = New System.Drawing.Point(121, 122)
         Me.txtEfectivo.Name = "txtEfectivo"
         Me.txtEfectivo.Size = New System.Drawing.Size(175, 35)
         Me.txtEfectivo.TabIndex = 8
@@ -107,9 +107,11 @@ Partial Class GUI_Ventas_Cobrar
         '
         'btnCobrar
         '
-        Me.btnCobrar.BackColor = System.Drawing.Color.LightGreen
+        Me.btnCobrar.BackColor = System.Drawing.Color.LimeGreen
+        Me.btnCobrar.FlatAppearance.BorderSize = 0
         Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCobrar.Location = New System.Drawing.Point(170, 285)
+        Me.btnCobrar.ForeColor = System.Drawing.Color.White
+        Me.btnCobrar.Location = New System.Drawing.Point(170, 251)
         Me.btnCobrar.Name = "btnCobrar"
         Me.btnCobrar.Size = New System.Drawing.Size(126, 43)
         Me.btnCobrar.TabIndex = 9
@@ -119,8 +121,8 @@ Partial Class GUI_Ventas_Cobrar
         'txtTicket
         '
         Me.txtTicket.AutoSize = True
-        Me.txtTicket.ForeColor = System.Drawing.Color.Gray
-        Me.txtTicket.Location = New System.Drawing.Point(203, 233)
+        Me.txtTicket.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.txtTicket.Location = New System.Drawing.Point(203, 215)
         Me.txtTicket.Name = "txtTicket"
         Me.txtTicket.Size = New System.Drawing.Size(93, 31)
         Me.txtTicket.TabIndex = 10
@@ -129,9 +131,11 @@ Partial Class GUI_Ventas_Cobrar
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.Color.MistyRose
+        Me.btnCancelar.BackColor = System.Drawing.Color.Tomato
+        Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Location = New System.Drawing.Point(17, 285)
+        Me.btnCancelar.ForeColor = System.Drawing.Color.White
+        Me.btnCancelar.Location = New System.Drawing.Point(17, 251)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(126, 43)
         Me.btnCancelar.TabIndex = 11
@@ -143,7 +147,7 @@ Partial Class GUI_Ventas_Cobrar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.WhiteSmoke
-        Me.ClientSize = New System.Drawing.Size(315, 340)
+        Me.ClientSize = New System.Drawing.Size(315, 301)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.txtTicket)
         Me.Controls.Add(Me.btnCobrar)

@@ -60,6 +60,7 @@ Partial Class GUI_Caja_Inicio
         '
         Me.txtInicioCaja.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtInicioCaja.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtInicioCaja.ForeColor = System.Drawing.Color.DodgerBlue
         Me.txtInicioCaja.Location = New System.Drawing.Point(91, 127)
         Me.txtInicioCaja.MaxLength = 10
         Me.txtInicioCaja.Name = "txtInicioCaja"

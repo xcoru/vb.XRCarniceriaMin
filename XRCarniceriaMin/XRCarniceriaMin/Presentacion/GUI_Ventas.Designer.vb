@@ -23,7 +23,7 @@ Partial Class GUI_Ventas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Ventas))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -40,6 +40,7 @@ Partial Class GUI_Ventas
         Me.btnEgreso = New System.Windows.Forms.Button()
         Me.btnConfig = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnCobrar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -55,14 +56,13 @@ Partial Class GUI_Ventas
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.timFecha = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel5 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel5.SuspendLayout()
         Me.Panel4.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -150,6 +150,8 @@ Partial Class GUI_Ventas
         '
         Me.btnSalir.BackColor = System.Drawing.Color.Tomato
         Me.btnSalir.FlatAppearance.BorderSize = 0
+        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red
+        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Arial", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.Location = New System.Drawing.Point(242, 9)
@@ -248,6 +250,18 @@ Partial Class GUI_Ventas
         Me.Panel3.Size = New System.Drawing.Size(1222, 111)
         Me.Panel3.TabIndex = 2
         '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.LightSlateGray
+        Me.Panel5.Controls.Add(Me.btnCorte)
+        Me.Panel5.Controls.Add(Me.btnEgreso)
+        Me.Panel5.Controls.Add(Me.btnConfig)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Panel5.Location = New System.Drawing.Point(935, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(287, 111)
+        Me.Panel5.TabIndex = 11
+        '
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.AliceBlue
@@ -322,8 +336,8 @@ Partial Class GUI_Ventas
         'dgvTabla
         '
         Me.dgvTabla.AllowUserToAddRows = False
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.Azure
-        Me.dgvTabla.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure
+        Me.dgvTabla.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTabla.BackgroundColor = System.Drawing.Color.White
@@ -383,18 +397,6 @@ Partial Class GUI_Ventas
         Me.timFecha.Enabled = True
         Me.timFecha.Interval = 1000
         '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.LightSlateGray
-        Me.Panel5.Controls.Add(Me.btnCorte)
-        Me.Panel5.Controls.Add(Me.btnEgreso)
-        Me.Panel5.Controls.Add(Me.btnConfig)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(935, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(287, 111)
-        Me.Panel5.TabIndex = 11
-        '
         'GUI_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
@@ -414,9 +416,9 @@ Partial Class GUI_Ventas
         Me.Panel7.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
