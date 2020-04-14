@@ -1,6 +1,29 @@
 ﻿Module FP
 
     Public Sub CargarDB()
+        Dim dbNegocio As New D_Negocio
+        Dim dbConfig As New D_Config
+        Dim resNegocio As DataSet
+        Dim resConfig As DataSet
+
+        Try
+            resNegocio = dbNegocio.Consulta(1)
+            _negocio_nombre = resNegocio.Tables(0).Rows(0)(1).ToString
+            _negocio_descripcion = resNegocio.Tables(0).Rows(0)(2).ToString
+            _negocio_direccion = resNegocio.Tables(0).Rows(0)(3).ToString
+            _negocio_telefono = resNegocio.Tables(0).Rows(0)(4).ToString
+            _negocio_logotipo = Image.FromFile(resNegocio.Tables(0).Rows(0)(5).ToString)
+
+        Catch ex As Exception
+            _Error(ex)
+        End Try
+
+        Try
+            resConfig = dbConfig.Consulta(1)
+            _config_impresora = resConfig.Tables(0).Rows(0)(1).ToString
+        Catch ex As Exception
+            _Error(ex)
+        End Try
 
     End Sub
 
@@ -28,4 +51,11 @@
         MsgBox(mensaje, vbOKOnly + op, _negocio_nombre)
 
     End Sub
+    Public Sub _Error(ByVal Optional ex As Exception = Nothing)
+        If _MostrarErrores Then
+            msg(ex.Message + " TTT " + ex.StackTrace, 3)
+        End If
+    End Sub
+
+
 End Module

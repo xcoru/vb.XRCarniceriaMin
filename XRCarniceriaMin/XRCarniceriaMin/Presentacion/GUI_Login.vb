@@ -10,7 +10,7 @@
                     _usuario_id_usuario = Consulta.Tables(0).Rows(0)(0).ToString
                     _usuario_nombre = Consulta.Tables(0).Rows(0)(1).ToString
                     CargarDB() 'Función publica
-                    GUI_Ventas.Show()
+                    GUI_Caja_Inicio.Show()
                     Close()
                 Else
                     msg("Datos incorrectos!", 3)
@@ -20,9 +20,11 @@
                 End If
             Else
                 msg("Ingrese una contraseña válida!", 3)
+                txtPassword.Select()
             End If
         Else
             msg("Ingrese un usuario válido!", 3)
+            txtUsuario.Select()
         End If
     End Sub
 
@@ -33,5 +35,17 @@
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
         End
+    End Sub
+
+    Private Sub txtUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtUsuario.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            txtPassword.Select()
+        End If
+    End Sub
+
+    Private Sub txtPassword_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtPassword.KeyPress
+        If e.KeyChar = ChrW(13) Then
+            Call BtnEntrar_Click(sender, e)
+        End If
     End Sub
 End Class

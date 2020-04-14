@@ -22,6 +22,7 @@ Partial Class GUI_Caja_Inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Caja_Inicio))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.txtInicioCaja = New System.Windows.Forms.TextBox()
@@ -38,12 +39,12 @@ Partial Class GUI_Caja_Inicio
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(377, 52)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Caja"
+        Me.Label1.Text = "Efectivo de Inicio"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnGuardar
         '
-        Me.btnGuardar.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnGuardar.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnGuardar.FlatAppearance.BorderSize = 0
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -59,7 +60,8 @@ Partial Class GUI_Caja_Inicio
         '
         Me.txtInicioCaja.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtInicioCaja.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtInicioCaja.Location = New System.Drawing.Point(91, 121)
+        Me.txtInicioCaja.Location = New System.Drawing.Point(91, 127)
+        Me.txtInicioCaja.MaxLength = 10
         Me.txtInicioCaja.Name = "txtInicioCaja"
         Me.txtInicioCaja.Size = New System.Drawing.Size(197, 28)
         Me.txtInicioCaja.TabIndex = 7
@@ -87,10 +89,11 @@ Partial Class GUI_Caja_Inicio
         Me.Controls.Add(Me.Label1)
         Me.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(7, 6, 7, 6)
         Me.Name = "GUI_Caja_Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "GUI_Caja_Inicio"
+        Me.Text = "Inicio de Caja"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -46,8 +46,8 @@ Public Class D_Config
     End Function
 
     'Devuelve la consulta de un articulo en especifico
-    Public Function Consulta(ByVal ID As String) As DataSet
-        Return QueryC("CALL " & Tabla & "_consultar('" & ID & "')")
+    Public Function Consulta(ByVal ID As Integer) As DataSet
+        Return QueryC("CALL " & Tabla & "_consultar(" & ID & ")")
     End Function
 
     'Devuelve el primer articulo que aparece en la tabla de articulos
@@ -61,27 +61,27 @@ Public Class D_Config
     End Function
 
     'Devuelve el siguiente articulo en la tabla articulo en base al que se especifica
-    Public Function GetSiguiente(ByVal ID As String) As DataSet
-        Return QueryC("CALL " & Tabla & "_siguiente('" & ID & "')")
+    Public Function GetSiguiente(ByVal ID As Integer) As DataSet
+        Return QueryC("CALL " & Tabla & "_siguiente(" & ID & ")")
     End Function
 
     'Devuelve el articulo anterior en la tabla articulo en base al que se especifica
-    Public Function GetAnterior(ByVal ID As String) As DataSet
-        Return QueryC("CALL " & Tabla & "_atras('" & ID & "')")
+    Public Function GetAnterior(ByVal ID As Integer) As DataSet
+        Return QueryC("CALL " & Tabla & "_atras(" & ID & ")")
     End Function
 
     'Consulta la existencia de un articulo y devuelve SI o No 
-    Public Function Existe(ByVal ID As String) As Boolean
+    Public Function Existe(ByVal ID As Integer) As Boolean
         Dim valor As Boolean = False
-        If QueryC("CALL " & Tabla & "_consultar('" & ID & "')").Tables(0).Rows.Count Then
+        If QueryC("CALL " & Tabla & "_consultar(" & ID & ")").Tables(0).Rows.Count Then
             valor = True
         End If
         Return valor
     End Function
 
     'Elimina un articulo especificado
-    Public Sub Eliminar(ByVal ID As String)
-        QueryC("CALL " & Tabla & "_eliminar('" & ID & "')")
+    Public Sub Eliminar(ByVal ID As Integer)
+        QueryC("CALL " & Tabla & "_eliminar(" & ID & ")")
         MsgBox(StrConv(Tabla, 3) & " eliminado correctamente!", vbOKOnly + vbInformation, _negocio_nombre)
     End Sub
 

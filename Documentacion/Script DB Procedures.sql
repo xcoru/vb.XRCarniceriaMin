@@ -275,7 +275,7 @@ CREATE PROCEDURE negocio_insertar(
     IN campo2	VARCHAR(250),
     IN campo3 	VARCHAR(250),
 	IN campo4 	VARCHAR(12),
-    IN campo5 	LONGBLOB
+    IN campo5 	VARCHAR(500)
 )
    BEGIN
 		INSERT INTO negocio(
@@ -304,7 +304,7 @@ CREATE PROCEDURE negocio_editar(
     IN campo3	VARCHAR(250),
     IN campo4 	VARCHAR(250),
 	IN campo5 	VARCHAR(12),
-    IN campo6 	LONGBLOB
+    IN campo6 	VARCHAR(500)
 )
    BEGIN
 		UPDATE negocio SET 
@@ -571,5 +571,4 @@ CREATE PROCEDURE ventas_filtrar(
         FROM ventas WHERE fecha BETWEEN fecha_ini AND fecha_fin LIMIT 5;
    END //
 DELIMITER ;
-
 

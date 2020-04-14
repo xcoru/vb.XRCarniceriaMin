@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`negocio` (
   `descripcion` VARCHAR(250) NULL,
   `direccion` VARCHAR(250) NULL,
   `telefono` VARCHAR(12) NULL,
-  `logotipo` LONGBLOB NULL,
+  `logotipo` VARCHAR(500) NULL,
   PRIMARY KEY (`id_negocio`))
 ENGINE = InnoDB;
 
@@ -80,6 +80,36 @@ CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`config` (
   `impresora` VARCHAR(120) NULL,
   PRIMARY KEY (`id_config`))
 ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Data for table `xrcarniceriamin`.`usuario`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `xrcarniceriamin`;
+INSERT INTO `xrcarniceriamin`.`usuario` (`id_usuario`, `nombre`, `password`, `estado`) VALUES ('admin', 'Administrador', 'admin', 1);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `xrcarniceriamin`.`negocio`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `xrcarniceriamin`;
+INSERT INTO `xrcarniceriamin`.`negocio` (`id_negocio`, `nombre`, `descripcion`, `direccion`, `telefono`, `logotipo`) VALUES (1, 'Carniceria', '\"Nombre Carniceria\"', 'Dirección', '000-000-0000', NULL);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `xrcarniceriamin`.`config`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `xrcarniceriamin`;
+INSERT INTO `xrcarniceriamin`.`config` (`id_config`, `impresora`) VALUES (1, 'POST-58');
+
+COMMIT;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;

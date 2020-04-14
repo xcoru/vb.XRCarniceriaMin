@@ -21,6 +21,7 @@
 #End Region
 
 #Region "General"
+    Public _InicioCaja As Decimal = 0
     Public _MostrarErrores As Boolean = True         'True si se desea mostrar detalles de errores
 #End Region
 

@@ -22,6 +22,7 @@ Partial Class GUI_Login
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Login))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -93,7 +94,7 @@ Partial Class GUI_Login
         '
         'btnEntrar
         '
-        Me.btnEntrar.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnEntrar.BackColor = System.Drawing.Color.CornflowerBlue
         Me.btnEntrar.FlatAppearance.BorderSize = 0
         Me.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEntrar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -131,9 +132,10 @@ Partial Class GUI_Login
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "GUI_Login"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Form1"
+        Me.Text = "Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
