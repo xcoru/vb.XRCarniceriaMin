@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class GUI_Config
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class GUI_Config
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Config))
         Me.Label1 = New System.Windows.Forms.Label()
@@ -33,13 +33,15 @@ Partial Class GUI_Config
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtLogotipo = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnImpresora = New System.Windows.Forms.Button()
         Me.txtImpresora = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnArchivo = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.imgLogoTipo = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.diaArchivo = New System.Windows.Forms.OpenFileDialog()
+        Me.diaImpresora = New System.Windows.Forms.PrintDialog()
         CType(Me.imgLogoTipo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -79,6 +81,7 @@ Partial Class GUI_Config
         'txtNombre
         '
         Me.txtNombre.Location = New System.Drawing.Point(22, 173)
+        Me.txtNombre.MaxLength = 120
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(245, 35)
         Me.txtNombre.TabIndex = 5
@@ -86,6 +89,7 @@ Partial Class GUI_Config
         'txtDireccion
         '
         Me.txtDireccion.Location = New System.Drawing.Point(290, 173)
+        Me.txtDireccion.MaxLength = 250
         Me.txtDireccion.Name = "txtDireccion"
         Me.txtDireccion.Size = New System.Drawing.Size(362, 35)
         Me.txtDireccion.TabIndex = 7
@@ -103,6 +107,7 @@ Partial Class GUI_Config
         'txtTelefono
         '
         Me.txtTelefono.Location = New System.Drawing.Point(22, 262)
+        Me.txtTelefono.MaxLength = 12
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(245, 35)
         Me.txtTelefono.TabIndex = 9
@@ -136,16 +141,16 @@ Partial Class GUI_Config
         Me.Label6.Text = "Logotipo"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button1
+        'btnImpresora
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(217, 425)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(50, 35)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = ">>"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnImpresora.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.btnImpresora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImpresora.Location = New System.Drawing.Point(217, 425)
+        Me.btnImpresora.Name = "btnImpresora"
+        Me.btnImpresora.Size = New System.Drawing.Size(50, 35)
+        Me.btnImpresora.TabIndex = 12
+        Me.btnImpresora.Text = ">>"
+        Me.btnImpresora.UseVisualStyleBackColor = False
         '
         'txtImpresora
         '
@@ -161,21 +166,21 @@ Partial Class GUI_Config
         Me.Label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Label7.Location = New System.Drawing.Point(22, 396)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(245, 27)
+        Me.Label7.Size = New System.Drawing.Size(189, 27)
         Me.Label7.TabIndex = 13
         Me.Label7.Text = "Impresora"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Button2
+        'btnArchivo
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Location = New System.Drawing.Point(602, 262)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(50, 35)
-        Me.Button2.TabIndex = 15
-        Me.Button2.Text = ">>"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnArchivo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.btnArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnArchivo.Location = New System.Drawing.Point(602, 262)
+        Me.btnArchivo.Name = "btnArchivo"
+        Me.btnArchivo.Size = New System.Drawing.Size(50, 35)
+        Me.btnArchivo.TabIndex = 15
+        Me.btnArchivo.Text = ">>"
+        Me.btnArchivo.UseVisualStyleBackColor = False
         '
         'btnGuardar
         '
@@ -213,6 +218,15 @@ Partial Class GUI_Config
         Me.Button3.Text = "Atras"
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'diaArchivo
+        '
+        Me.diaArchivo.FileName = "OpenFileDialog1"
+        '
+        'diaImpresora
+        '
+        Me.diaImpresora.AllowPrintToFile = False
+        Me.diaImpresora.UseEXDialog = True
+        '
         'GUI_Config
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
@@ -221,10 +235,10 @@ Partial Class GUI_Config
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.imgLogoTipo)
         Me.Controls.Add(Me.btnGuardar)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnArchivo)
         Me.Controls.Add(Me.txtImpresora)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnImpresora)
         Me.Controls.Add(Me.txtLogotipo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtTelefono)
@@ -260,11 +274,13 @@ Partial Class GUI_Config
     Friend WithEvents Label5 As Label
     Friend WithEvents txtLogotipo As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnImpresora As Button
     Friend WithEvents txtImpresora As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnArchivo As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents imgLogoTipo As PictureBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents diaArchivo As OpenFileDialog
+    Friend WithEvents diaImpresora As PrintDialog
 End Class

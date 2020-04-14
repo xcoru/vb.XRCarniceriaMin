@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.XRCarniceriaMin.GUI_Login
+            Me.MainForm = Global.XRCarniceriaMin.GUI_Config
         End Sub
     End Class
 End Namespace

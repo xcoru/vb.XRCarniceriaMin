@@ -211,6 +211,7 @@ Partial Class GUI_Ventas
         'btnEgreso
         '
         Me.btnEgreso.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnEgreso.Enabled = False
         Me.btnEgreso.FlatAppearance.BorderSize = 0
         Me.btnEgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEgreso.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
