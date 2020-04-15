@@ -23,7 +23,7 @@
             txtDireccion.Text = _negocio_direccion
             txtTelefono.Text = _negocio_telefono
             Try
-                txtLogotipo.BackgroundImage = _negocio_logotipo
+                txtLogotipo.BackgroundImage = Image.FromFile(_negocio_logotipo)
             Catch ex As Exception
                 _Error(ex)
             End Try
@@ -43,5 +43,9 @@
 
     Private Sub BtnCorte_Click(sender As Object, e As EventArgs) Handles btnCorte.Click
         GUI_Caja_Corte.ShowDialog()
+    End Sub
+
+    Private Sub BtnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
+        GUI_Articulos.ShowDialog()
     End Sub
 End Class

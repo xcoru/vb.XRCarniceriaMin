@@ -1,24 +1,26 @@
-﻿Public Class I_Catalogo
-    Private _id_catalogo As String
+﻿Public Class I_Articulo
+    Private _id_articulo As String
     Private _descripcion As String
     Private _tipo As String
     Private _precio As Decimal
+    Private _imagen As String
     Private _estado As Integer
 
-    Public Sub New(id_catalogo As String, descripcion As String, tipo As String, precio As Decimal, estado As Integer)
-        _id_catalogo = id_catalogo
+    Public Sub New(id_articulo As String, descripcion As String, tipo As String, precio As Decimal, imagen As String, estado As Integer)
+        _id_articulo = id_articulo
         _descripcion = descripcion
         _tipo = tipo
         _precio = precio
+        _imagen = imagen
         _estado = estado
     End Sub
 
-    Public Property Id_catalogo As String
+    Public Property Id_articulo As String
         Get
-            Return _id_catalogo
+            Return _id_articulo
         End Get
         Set(value As String)
-            _id_catalogo = value
+            _id_articulo = value
         End Set
     End Property
 
@@ -55,6 +57,15 @@
         End Get
         Set(value As Integer)
             _estado = value
+        End Set
+    End Property
+
+    Public Property Imagen As String
+        Get
+            Return _imagen
+        End Get
+        Set(value As String)
+            _imagen = value
         End Set
     End Property
 End Class

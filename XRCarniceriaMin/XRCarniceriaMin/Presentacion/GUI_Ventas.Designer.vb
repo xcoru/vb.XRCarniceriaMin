@@ -56,6 +56,7 @@ Partial Class GUI_Ventas
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.timFecha = New System.Windows.Forms.Timer(Me.components)
+        Me.btnArticulos = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -228,7 +229,7 @@ Partial Class GUI_Ventas
         Me.btnConfig.FlatAppearance.BorderSize = 0
         Me.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnConfig.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConfig.Location = New System.Drawing.Point(197, 15)
+        Me.btnConfig.Location = New System.Drawing.Point(291, 15)
         Me.btnConfig.Name = "btnConfig"
         Me.btnConfig.Size = New System.Drawing.Size(80, 80)
         Me.btnConfig.TabIndex = 1
@@ -254,13 +255,14 @@ Partial Class GUI_Ventas
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.LightSlateGray
+        Me.Panel5.Controls.Add(Me.btnArticulos)
         Me.Panel5.Controls.Add(Me.btnCorte)
         Me.Panel5.Controls.Add(Me.btnEgreso)
         Me.Panel5.Controls.Add(Me.btnConfig)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(935, 0)
+        Me.Panel5.Location = New System.Drawing.Point(839, 0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(287, 111)
+        Me.Panel5.Size = New System.Drawing.Size(383, 111)
         Me.Panel5.TabIndex = 11
         '
         'btnCancelar
@@ -398,6 +400,19 @@ Partial Class GUI_Ventas
         Me.timFecha.Enabled = True
         Me.timFecha.Interval = 1000
         '
+        'btnArticulos
+        '
+        Me.btnArticulos.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnArticulos.FlatAppearance.BorderSize = 0
+        Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnArticulos.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnArticulos.Location = New System.Drawing.Point(198, 15)
+        Me.btnArticulos.Name = "btnArticulos"
+        Me.btnArticulos.Size = New System.Drawing.Size(80, 80)
+        Me.btnArticulos.TabIndex = 4
+        Me.btnArticulos.Text = "Productos"
+        Me.btnArticulos.UseVisualStyleBackColor = False
+        '
         'GUI_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
@@ -455,4 +470,5 @@ Partial Class GUI_Ventas
     Friend WithEvents txtLogotipo As Panel
     Friend WithEvents txtDireccion As Label
     Friend WithEvents Panel5 As Panel
+    Friend WithEvents btnArticulos As Button
 End Class

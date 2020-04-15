@@ -15,15 +15,16 @@ CREATE SCHEMA IF NOT EXISTS `xrcarniceriamin` DEFAULT CHARACTER SET utf8 ;
 USE `xrcarniceriamin` ;
 
 -- -----------------------------------------------------
--- Table `xrcarniceriamin`.`catalogo`
+-- Table `xrcarniceriamin`.`articulo`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`catalogo` (
-  `id_catalogo` VARCHAR(20) NOT NULL,
+CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`articulo` (
+  `id_articulo` VARCHAR(20) NOT NULL,
   `descripcion` VARCHAR(120) NULL,
   `tipo` VARCHAR(20) NULL DEFAULT 'Granel',
   `precio` DECIMAL(10,2) NULL DEFAULT 0,
+  `imagen` VARCHAR(500) NULL,
   `estado` INT NULL DEFAULT 1,
-  PRIMARY KEY (`id_catalogo`))
+  PRIMARY KEY (`id_articulo`))
 ENGINE = InnoDB;
 
 
@@ -43,7 +44,7 @@ ENGINE = InnoDB;
 -- Table `xrcarniceriamin`.`negocio`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`negocio` (
-  `id_negocio` INT NOT NULL AUTO_INCREMENT,
+  `id_negocio` INT NOT NULL,
   `nombre` VARCHAR(120) NULL,
   `descripcion` VARCHAR(250) NULL,
   `direccion` VARCHAR(250) NULL,

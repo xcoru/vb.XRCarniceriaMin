@@ -14,7 +14,7 @@
     Public _negocio_descripcion As String = ""
     Public _negocio_direccion As String = ""
     Public _negocio_telefono As String = ""
-    Public _negocio_logotipo As Image = Nothing
+    Public _negocio_logotipo As String = ""
 #End Region
 #Region "Config"
     Public _config_impresora As String = ""

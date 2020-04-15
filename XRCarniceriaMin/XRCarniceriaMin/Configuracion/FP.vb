@@ -12,7 +12,7 @@
             _negocio_descripcion = resNegocio.Tables(0).Rows(0)(2).ToString
             _negocio_direccion = resNegocio.Tables(0).Rows(0)(3).ToString
             _negocio_telefono = resNegocio.Tables(0).Rows(0)(4).ToString
-            _negocio_logotipo = Image.FromFile(resNegocio.Tables(0).Rows(0)(5).ToString)
+            _negocio_logotipo = resNegocio.Tables(0).Rows(0)(5).ToString
 
         Catch ex As Exception
             _Error(ex)

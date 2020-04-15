@@ -28,12 +28,12 @@ Public Class D_Negocio
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id_neg", MySqlDbType.Int32).Value = _Elemento.Id_negocio
-                .Add("nom", MySqlDbType.VarChar).Value = _Elemento.Nombre
-                .Add("des", MySqlDbType.VarChar).Value = _Elemento.Descripcion
-                .Add("dir", MySqlDbType.VarChar).Value = _Elemento.Direccion
-                .Add("tel", MySqlDbType.VarChar).Value = _Elemento.Telefono
-                .Add("log", MySqlDbType.LongBlob).Value = _Elemento.Logotipo_Bytes
+                .Add("campo1", MySqlDbType.Int32).Value = _Elemento.Id_negocio
+                .Add("campo2", MySqlDbType.VarChar).Value = _Elemento.Nombre
+                .Add("campo3", MySqlDbType.VarChar).Value = _Elemento.Descripcion
+                .Add("campo4", MySqlDbType.VarChar).Value = _Elemento.Direccion
+                .Add("campo5", MySqlDbType.VarChar).Value = _Elemento.Telefono
+                .Add("campo6", MySqlDbType.VarChar).Value = _Elemento.Logotipo
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception

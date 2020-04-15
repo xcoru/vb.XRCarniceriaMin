@@ -2,6 +2,9 @@
     Private _id_config As Integer
     Private _impresora As String
 
+    Public Sub New()
+
+    End Sub
     Public Sub New(id_config As Integer, impresora As String)
         Me.Id_config = id_config
         Me.Impresora = impresora

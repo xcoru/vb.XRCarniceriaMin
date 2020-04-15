@@ -1,24 +1,24 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class D_Catalogo
+Public Class D_Articulo
     Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
 
     '--Modificar lo de abajo ******************************************************
-    Dim Tabla As String = "catalogo"
+    Dim Tabla As String = "articulo"
 
     'Inserta un articulo en la base de datos
-    Public Function Insertar(ByVal _Elemento As I_Catalogo) As Boolean
+    Public Function Insertar(ByVal _Elemento As I_Articulo) As Boolean
         Return QueryM(Tabla & "_insertar", _Elemento)
     End Function
 
     'Edita un articulo
-    Public Function Editar(ByVal _Elemento As I_Catalogo) As Boolean
+    Public Function Editar(ByVal _Elemento As I_Articulo) As Boolean
         Return QueryM(Tabla & "_editar", _Elemento)
     End Function
 
     'Esta funcion se encarga de agregar, editar registros en la tabla articulo
-    Private Function QueryM(ByVal Cadena As String, ByVal _Elemento As I_Catalogo) As Boolean
+    Private Function QueryM(ByVal Cadena As String, ByVal _Elemento As I_Articulo) As Boolean
         cn = objCon.conectar
         Dim Estado As Boolean = False
         Try
@@ -26,11 +26,12 @@ Public Class D_Catalogo
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id_cat", MySqlDbType.VarChar).Value = _Elemento.Id_catalogo
-                .Add("des", MySqlDbType.VarChar).Value = _Elemento.Descripcion
-                .Add("tip", MySqlDbType.VarChar).Value = _Elemento.Tipo
-                .Add("pre", MySqlDbType.Decimal).Value = _Elemento.Precio
-                .Add("est", MySqlDbType.Int32).Value = _Elemento.Estado
+                .Add("campo1", MySqlDbType.VarChar).Value = _Elemento.Id_articulo
+                .Add("campo2", MySqlDbType.VarChar).Value = _Elemento.Descripcion
+                .Add("campo3", MySqlDbType.VarChar).Value = _Elemento.Tipo
+                .Add("campo4", MySqlDbType.Decimal).Value = _Elemento.Precio
+                .Add("campo5", MySqlDbType.VarChar).Value = _Elemento.Imagen
+                .Add("campo6", MySqlDbType.Int32).Value = _Elemento.Estado
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception

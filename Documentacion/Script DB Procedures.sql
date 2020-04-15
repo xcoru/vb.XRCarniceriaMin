@@ -3,56 +3,60 @@
 #  --------------------------------------------------------------------------------------------------------------------------------------------
 
 
-#TABLA CATALOGO *********** TABLA CATALOGO ***********TABLA CATALOGO *********************************************************************************
+#TABLA ARTICULO *********** TABLA ARTICULO *********** TABLA ARTICULO *********************************************************************************
 
 
 
-DROP PROCEDURE IF EXISTS catalogo_mostrar;
+DROP PROCEDURE IF EXISTS articulo_mostrar;
  DELIMITER //
-CREATE PROCEDURE catalogo_mostrar()
+CREATE PROCEDURE articulo_mostrar()
    BEGIN
 		SELECT 
-			id_catalogo		AS	 'ID',
+			id_articulo		AS	 'ID',
 			descripcion		AS	 'Descripcion',
 			tipo 			AS	 'Tipo',
 			precio 			AS	 'Precio',
+			imagen 			AS	 'Imagen',
 			estado 			AS	 'Estado'
-		FROM catalogo;
+		FROM articulo;
    END //
 DELIMITER ;
 
 
-DROP PROCEDURE IF EXISTS catalogo_consultar;
+DROP PROCEDURE IF EXISTS articulo_consultar;
  DELIMITER //
-CREATE PROCEDURE catalogo_consultar(IN id_ VARCHAR(20))
+CREATE PROCEDURE articulo_consultar(IN id_ VARCHAR(20))
    BEGIN
 		SELECT 
-			id_catalogo		AS	 'ID',
+			id_articulo		AS	 'ID',
 			descripcion		AS	 'Descripcion',
 			tipo 			AS	 'Tipo',
 			precio 			AS	 'Precio',
+			imagen 			AS	 'Imagen',
 			estado 			AS	 'Estado'
-		FROM catalogo 
-        WHERE id_catalogo = id_;
+		FROM articulo 
+        WHERE id_articulo = id_;
    END //
 DELIMITER ;
 
 
-DROP PROCEDURE IF EXISTS catalogo_insertar;
+DROP PROCEDURE IF EXISTS articulo_insertar;
  DELIMITER //
-CREATE PROCEDURE catalogo_insertar(
+CREATE PROCEDURE articulo_insertar(
 	IN campo1   VARCHAR(20), 
     IN campo2	VARCHAR(120),
     IN campo3 	VARCHAR(20),
-	IN campo4 	DEC(10,2),
-    IN campo5 	INT
+		IN campo4 	DEC(10,2),
+		IN campo5 	VARCHAR(500),
+    IN campo6 	INT
 )
    BEGIN
-		INSERT INTO catalogo(
-			id_catalogo, 
+		INSERT INTO articulo(
+			id_articulo, 
 			descripcion, 
 			tipo, 
-			precio, 
+			precio,
+			imagen,
 			estado
             ) 
 		VALUES(
@@ -60,54 +64,58 @@ CREATE PROCEDURE catalogo_insertar(
 			campo2,
 			campo3,
 			campo4,
-			campo5
+			campo5,
+			campo6
             );
    END //
 DELIMITER ;
 
 
-DROP PROCEDURE IF EXISTS catalogo_editar;
+DROP PROCEDURE IF EXISTS articulo_editar;
  DELIMITER //
-CREATE PROCEDURE catalogo_editar(
+CREATE PROCEDURE articulo_editar(
 	IN campo1   VARCHAR(20), 
     IN campo2	VARCHAR(120),
     IN campo3 	VARCHAR(20),
-	IN campo4 	DEC(10,2),
-    IN campo5 	INT
+		IN campo4 	DEC(10,2),
+		IN campo5 	VARCHAR(500),
+    IN campo6 	INT
 )
    BEGIN
-		UPDATE catalogo SET 
+		UPDATE articulo SET 
 			descripcion 	= campo2, 
 			tipo			= campo3, 
 			precio			= campo4, 
-			estado			= campo5
-		WHERE id_catalogo  = campo1;
+			imagen		= campo5,
+			estado			= campo6
+		WHERE id_articulo  = campo1;
    END //
 DELIMITER ;
 
 
-DROP PROCEDURE IF EXISTS catalogo_eliminar;
+DROP PROCEDURE IF EXISTS articulo_eliminar;
  DELIMITER //
-CREATE PROCEDURE catalogo_eliminar(IN id_ VARCHAR(20))
+CREATE PROCEDURE articulo_eliminar(IN id_ VARCHAR(20))
    BEGIN
-		DELETE FROM catalogo WHERE id_catalogo = id_;
+		DELETE FROM articulo WHERE id_articulo = id_;
    END //
 DELIMITER ;
 
 
-DROP PROCEDURE IF EXISTS catalogo_filtrar;
+DROP PROCEDURE IF EXISTS articulo_filtrar;
  DELIMITER //
-CREATE PROCEDURE catalogo_filtrar(
+CREATE PROCEDURE articulo_filtrar(
 	IN cadena VARCHAR(150)
 )
    BEGIN
 		SELECT 
-			id_catalogo		AS	 'ID',
+			id_articulo		AS	 'ID',
 			descripcion		AS	 'Descripcion',
 			tipo 			AS	 'Tipo',
 			precio 			AS	 'Precio',
+			imagen 			AS	 'Imagen',
 			estado 			AS	 'Estado'
-        FROM catalogo WHERE CONCAT_WS(' ',id_catalogo, descripcion) LIKE CONCAT('%',cadena,'%') LIMIT 5;
+        FROM articulo WHERE CONCAT_WS(' ',id_articulo, descripcion) LIKE CONCAT('%',cadena,'%') LIMIT 5;
    END //
 DELIMITER ;
 
@@ -571,4 +579,3 @@ CREATE PROCEDURE ventas_filtrar(
         FROM ventas WHERE fecha BETWEEN fecha_ini AND fecha_fin LIMIT 5;
    END //
 DELIMITER ;
-

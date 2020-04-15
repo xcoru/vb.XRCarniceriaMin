@@ -28,8 +28,8 @@ Public Class D_Config
             da = New MySqlDataAdapter(Cadena, cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             With da.SelectCommand.Parameters
-                .Add("id_con", MySqlDbType.Int32).Value = _Elemento.Id_config
-                .Add("imp", MySqlDbType.VarChar).Value = _Elemento.Impresora
+                .Add("campo1", MySqlDbType.Int32).Value = _Elemento.Id_config
+                .Add("campo2", MySqlDbType.VarChar).Value = _Elemento.Impresora
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception

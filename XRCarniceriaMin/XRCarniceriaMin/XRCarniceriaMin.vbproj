@@ -82,13 +82,13 @@
   <ItemGroup>
     <Compile Include="Configuracion\FP.vb" />
     <Compile Include="Configuracion\VP.vb" />
-    <Compile Include="Datos\D_Catalogo.vb" />
+    <Compile Include="Datos\D_Articulo.vb" />
     <Compile Include="Datos\D_Config.vb" />
     <Compile Include="Datos\Conexion.vb" />
     <Compile Include="Datos\D_Negocio.vb" />
     <Compile Include="Datos\D_Usuario.vb" />
     <Compile Include="Datos\D_Ventas.vb" />
-    <Compile Include="Identidad\I_Catalogo.vb" />
+    <Compile Include="Identidad\I_Articulo.vb" />
     <Compile Include="Identidad\I_Config.vb" />
     <Compile Include="Identidad\I_Negocio.vb" />
     <Compile Include="Identidad\I_Usuario.vb" />

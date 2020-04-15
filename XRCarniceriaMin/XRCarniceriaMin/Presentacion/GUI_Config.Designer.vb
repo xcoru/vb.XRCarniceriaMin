@@ -39,7 +39,7 @@ Partial Class GUI_Config
         Me.btnArchivo = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.imgLogoTipo = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.diaArchivo = New System.Windows.Forms.OpenFileDialog()
         Me.diaImpresora = New System.Windows.Forms.PrintDialog()
         CType(Me.imgLogoTipo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,18 +207,18 @@ Partial Class GUI_Config
         Me.imgLogoTipo.TabIndex = 17
         Me.imgLogoTipo.TabStop = False
         '
-        'Button3
+        'btnAtras
         '
-        Me.Button3.BackColor = System.Drawing.Color.Tomato
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(275, 492)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(179, 44)
-        Me.Button3.TabIndex = 18
-        Me.Button3.Text = "Atras"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnAtras.BackColor = System.Drawing.Color.Tomato
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAtras.ForeColor = System.Drawing.Color.White
+        Me.btnAtras.Location = New System.Drawing.Point(275, 492)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(179, 44)
+        Me.btnAtras.TabIndex = 18
+        Me.btnAtras.Text = "Atras"
+        Me.btnAtras.UseVisualStyleBackColor = False
         '
         'diaArchivo
         '
@@ -234,7 +234,7 @@ Partial Class GUI_Config
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(674, 544)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnAtras)
         Me.Controls.Add(Me.imgLogoTipo)
         Me.Controls.Add(Me.btnGuardar)
         Me.Controls.Add(Me.btnArchivo)
@@ -282,7 +282,7 @@ Partial Class GUI_Config
     Friend WithEvents btnArchivo As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents imgLogoTipo As PictureBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnAtras As Button
     Friend WithEvents diaArchivo As OpenFileDialog
     Friend WithEvents diaImpresora As PrintDialog
 End Class
