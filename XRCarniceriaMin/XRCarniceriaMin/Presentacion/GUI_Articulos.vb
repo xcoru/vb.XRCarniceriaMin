@@ -1,16 +1,35 @@
 ﻿Public Class GUI_Articulos
 
+    Private Sub BorrarCampos()
+        Try
+            txtClaveProducto.Text = ""
+            txtDescripcion.Text = ""
+            txtImagen.Text = ""
+            imgArticulo.BackgroundImage = Nothing
+            txtPrecio.Text = ""
+            txtTipo.SelectedIndex = -1
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
 
     Private Sub CargarCampos()
+        BorrarCampos()
         Try
             txtClaveProducto.Text = dgvTabla.SelectedCells.Item(0).Value
             txtDescripcion.Text = dgvTabla.SelectedCells.Item(1).Value
-            txtTipo.Text = dgvTabla.SelectedCells.Item(2).Value
+
+            If dgvTabla.SelectedCells.Item(2).Value = "Kg" Then
+                txtTipo.SelectedIndex = 0
+            Else
+                txtTipo.SelectedIndex = 1
+            End If
             txtPrecio.Text = dgvTabla.SelectedCells.Item(3).Value
             txtImagen.Text = dgvTabla.SelectedCells.Item(4).Value
             imgArticulo.BackgroundImage = Image.FromFile(txtImagen.Text)
         Catch ex As Exception
-            _Error(ex)
+            '_Error(ex)
         End Try
 
     End Sub
@@ -61,15 +80,68 @@
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
         Dim dbCatalogo As New D_Articulo
+        Dim op As Integer
 
         If txtClaveProducto.TextLength > 0 Then
-            dbCatalogo.Eliminar(txtClaveProducto.Text)
-            CargarTabla()
+            op = MsgBox("Esta seguro de eliminar el articulo: '" + txtDescripcion.Text + "' ?", vbYesNo + vbExclamation, _negocio_nombre)
+            If op = vbYes Then
+                dbCatalogo.Eliminar(txtClaveProducto.Text)
+                CargarTabla()
+            Else
+                msg("Operación cancelada!", 2)
+            End If
         Else
             msg("Seleccione en la Tabla el registro a eliminar!", 2)
         End If
 
 
 
+    End Sub
+
+    Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        Dim dbArticulo As New D_Articulo
+        Dim objArticulo As New I_Articulo
+        Dim existe As Boolean = False
+        Dim op As Integer
+
+        With objArticulo
+            .Id_articulo = txtClaveProducto.Text
+            .Descripcion = txtDescripcion.Text
+            .Tipo = txtTipo.Text
+            .Precio = txtPrecio.Text
+            .Imagen = txtImagen.Text
+            .Estado = 1
+        End With
+
+        If dbArticulo.Existe(txtClaveProducto.Text) Then
+            existe = True
+        End If
+
+        If existe Then
+            op = MsgBox("Esta seguro de editar registro existente?", vbYesNo + vbExclamation, _negocio_nombre)
+            If op = vbYes Then
+                If dbArticulo.Editar(objArticulo) Then
+                    msg("Registro Editado!")
+                    CargarTabla()
+                Else
+                    msg("Error al editar!", 3)
+                End If
+            Else
+                msg("Operación cancelada!", 2)
+            End If
+
+        Else
+            If dbArticulo.Insertar(objArticulo) Then
+                msg("Registro guardado!")
+                CargarTabla()
+            Else
+                msg("Error al guardar!", 3)
+            End If
+        End If
+
+    End Sub
+
+    Private Sub dgvTabla_SelectionChanged(sender As Object, e As EventArgs) Handles dgvTabla.SelectionChanged
+        CargarCampos()
     End Sub
 End Class

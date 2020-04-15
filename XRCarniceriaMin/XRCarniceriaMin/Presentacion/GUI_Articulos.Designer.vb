@@ -171,9 +171,10 @@ Partial Class GUI_Articulos
         '
         'txtTipo
         '
+        Me.txtTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txtTipo.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTipo.FormattingEnabled = True
-        Me.txtTipo.Items.AddRange(New Object() {"Pieza", "Kg"})
+        Me.txtTipo.Items.AddRange(New Object() {"Kg.", "Pieza"})
         Me.txtTipo.Location = New System.Drawing.Point(4, 39)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(210, 35)
@@ -209,6 +210,7 @@ Partial Class GUI_Articulos
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(210, 35)
         Me.txtPrecio.TabIndex = 4
+        Me.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
@@ -249,19 +251,21 @@ Partial Class GUI_Articulos
         'btnImagen
         '
         Me.btnImagen.Font = New System.Drawing.Font("Arial Narrow", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnImagen.Location = New System.Drawing.Point(188, 104)
+        Me.btnImagen.Location = New System.Drawing.Point(5, 95)
         Me.btnImagen.Name = "btnImagen"
-        Me.btnImagen.Size = New System.Drawing.Size(35, 37)
+        Me.btnImagen.Size = New System.Drawing.Size(216, 37)
         Me.btnImagen.TabIndex = 5
         Me.btnImagen.Text = ">>"
         Me.btnImagen.UseVisualStyleBackColor = True
         '
         'txtImagen
         '
-        Me.txtImagen.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtImagen.Location = New System.Drawing.Point(5, 105)
+        Me.txtImagen.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtImagen.Location = New System.Drawing.Point(5, 138)
+        Me.txtImagen.Multiline = True
         Me.txtImagen.Name = "txtImagen"
-        Me.txtImagen.Size = New System.Drawing.Size(181, 35)
+        Me.txtImagen.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtImagen.Size = New System.Drawing.Size(216, 89)
         Me.txtImagen.TabIndex = 4
         '
         'Label6

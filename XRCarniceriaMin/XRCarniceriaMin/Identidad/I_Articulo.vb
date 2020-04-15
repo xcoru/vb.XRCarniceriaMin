@@ -6,6 +6,10 @@
     Private _imagen As String
     Private _estado As Integer
 
+    Public Sub New()
+
+    End Sub
+
     Public Sub New(id_articulo As String, descripcion As String, tipo As String, precio As Decimal, imagen As String, estado As Integer)
         _id_articulo = id_articulo
         _descripcion = descripcion
