@@ -20,7 +20,7 @@
             txtClaveProducto.Text = dgvTabla.SelectedCells.Item(0).Value
             txtDescripcion.Text = dgvTabla.SelectedCells.Item(1).Value
 
-            If dgvTabla.SelectedCells.Item(2).Value = "Kg" Then
+            If dgvTabla.SelectedCells.Item(2).Value = "Kg." Then
                 txtTipo.SelectedIndex = 0
             Else
                 txtTipo.SelectedIndex = 1
@@ -67,11 +67,6 @@
 
     Private Sub GUI_Articulos_Load(sender As Object, e As EventArgs) Handles Me.Load
         CargarTabla()
-    End Sub
-
-    Private Sub dgvTabla_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTabla.CellClick
-        CargarCampos()
-        'msg(dgvTabla.SelectedCells.Item(0).Value)
     End Sub
 
     Private Sub BtnAtras_Click(sender As Object, e As EventArgs) Handles btnAtras.Click
@@ -143,5 +138,16 @@
 
     Private Sub dgvTabla_SelectionChanged(sender As Object, e As EventArgs) Handles dgvTabla.SelectionChanged
         CargarCampos()
+    End Sub
+
+    Private Sub BtnLimpiar_Click(sender As Object, e As EventArgs) Handles btnLimpiar.Click
+        BorrarCampos()
+        txtClaveProducto.Select()
+    End Sub
+
+    Private Sub ImgArticulo_Click(sender As Object, e As EventArgs) Handles imgArticulo.Click
+        If txtImagen.TextLength > 0 Then
+            GUI_Visualizacion.ShowDialog()
+        End If
     End Sub
 End Class

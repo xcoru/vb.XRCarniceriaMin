@@ -93,10 +93,16 @@
     <Compile Include="Identidad\I_Negocio.vb" />
     <Compile Include="Identidad\I_Usuario.vb" />
     <Compile Include="Identidad\I_Ventas.vb" />
-    <Compile Include="Presentacion\GUI_Articulos.Designer.vb">
+    <Compile Include="Presentacion\Articulo\GUI_Articulos.Designer.vb">
       <DependentUpon>GUI_Articulos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\GUI_Articulos.vb">
+    <Compile Include="Presentacion\Articulo\GUI_Articulos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Articulo\GUI_Visualizacion.Designer.vb">
+      <DependentUpon>GUI_Visualizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Articulo\GUI_Visualizacion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\GUI_Caja_Corte.Designer.vb">
@@ -159,8 +165,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Presentacion\GUI_Articulos.resx">
+    <EmbeddedResource Include="Presentacion\Articulo\GUI_Articulos.resx">
       <DependentUpon>GUI_Articulos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Articulo\GUI_Visualizacion.resx">
+      <DependentUpon>GUI_Visualizacion.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\GUI_Caja_Corte.resx">
       <DependentUpon>GUI_Caja_Corte.vb</DependentUpon>

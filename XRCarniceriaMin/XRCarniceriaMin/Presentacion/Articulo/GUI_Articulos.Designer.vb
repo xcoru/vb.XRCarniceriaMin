@@ -48,6 +48,7 @@ Partial Class GUI_Articulos
         Me.txtImagen = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.btnEliminar = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -284,6 +285,7 @@ Partial Class GUI_Articulos
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Panel7.Controls.Add(Me.btnLimpiar)
         Me.Panel7.Controls.Add(Me.btnAtras)
         Me.Panel7.Controls.Add(Me.btnEliminar)
         Me.Panel7.Controls.Add(Me.btnGuardar)
@@ -292,13 +294,26 @@ Partial Class GUI_Articulos
         Me.Panel7.Size = New System.Drawing.Size(217, 234)
         Me.Panel7.TabIndex = 9
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.Goldenrod
+        Me.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLimpiar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLimpiar.ForeColor = System.Drawing.Color.WhiteSmoke
+        Me.btnLimpiar.Location = New System.Drawing.Point(4, 120)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(210, 50)
+        Me.btnLimpiar.TabIndex = 3
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
+        '
         'btnAtras
         '
-        Me.btnAtras.BackColor = System.Drawing.Color.Orange
+        Me.btnAtras.BackColor = System.Drawing.Color.DarkOrange
         Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAtras.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAtras.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnAtras.Location = New System.Drawing.Point(4, 146)
+        Me.btnAtras.Location = New System.Drawing.Point(4, 175)
         Me.btnAtras.Name = "btnAtras"
         Me.btnAtras.Size = New System.Drawing.Size(210, 50)
         Me.btnAtras.TabIndex = 2
@@ -307,11 +322,11 @@ Partial Class GUI_Articulos
         '
         'btnEliminar
         '
-        Me.btnEliminar.BackColor = System.Drawing.Color.Tomato
+        Me.btnEliminar.BackColor = System.Drawing.Color.Red
         Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminar.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnEliminar.Location = New System.Drawing.Point(4, 90)
+        Me.btnEliminar.Location = New System.Drawing.Point(4, 65)
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.Size = New System.Drawing.Size(210, 50)
         Me.btnEliminar.TabIndex = 1
@@ -324,7 +339,7 @@ Partial Class GUI_Articulos
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btnGuardar.Location = New System.Drawing.Point(4, 36)
+        Me.btnGuardar.Location = New System.Drawing.Point(4, 11)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(210, 50)
         Me.btnGuardar.TabIndex = 0
@@ -456,4 +471,5 @@ Partial Class GUI_Articulos
     Friend WithEvents imgArticulo As PictureBox
     Friend WithEvents btnImagen As Button
     Friend WithEvents btnAtras As Button
+    Friend WithEvents btnLimpiar As Button
 End Class
