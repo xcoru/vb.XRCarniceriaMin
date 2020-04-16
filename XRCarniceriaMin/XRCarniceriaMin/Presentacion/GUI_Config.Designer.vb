@@ -127,6 +127,7 @@ Partial Class GUI_Config
         Me.txtLogotipo.BackColor = System.Drawing.Color.Lavender
         Me.txtLogotipo.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtLogotipo.Location = New System.Drawing.Point(293, 265)
+        Me.txtLogotipo.MaxLength = 1000
         Me.txtLogotipo.Name = "txtLogotipo"
         Me.txtLogotipo.ReadOnly = True
         Me.txtLogotipo.Size = New System.Drawing.Size(303, 29)

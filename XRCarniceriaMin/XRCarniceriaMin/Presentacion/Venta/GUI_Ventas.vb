@@ -48,4 +48,8 @@
     Private Sub BtnArticulos_Click(sender As Object, e As EventArgs) Handles btnArticulos.Click
         GUI_Articulos.ShowDialog()
     End Sub
+
+    Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
+        GUI_Ventas_Agregar.ShowDialog()
+    End Sub
 End Class

@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuracion\FP.vb" />
+    <Compile Include="Configuracion\ObjArticulo.vb" />
     <Compile Include="Configuracion\VP.vb" />
     <Compile Include="Datos\D_Articulo.vb" />
     <Compile Include="Datos\D_Config.vb" />
@@ -130,22 +131,28 @@
       <DependentUpon>GUI_Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\GUI_Ventas.Designer.vb">
+    <Compile Include="Presentacion\Venta\GUI_Ventas.Designer.vb">
       <DependentUpon>GUI_Ventas.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\GUI_Ventas.vb">
+    <Compile Include="Presentacion\Venta\GUI_Ventas.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\GUI_Ventas_Cobrar.Designer.vb">
+    <Compile Include="Presentacion\Venta\GUI_Ventas_Agregar.Designer.vb">
+      <DependentUpon>GUI_Ventas_Agregar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Venta\GUI_Ventas_Agregar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Venta\GUI_Ventas_Cobrar.Designer.vb">
       <DependentUpon>GUI_Ventas_Cobrar.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\GUI_Ventas_Cobrar.vb">
+    <Compile Include="Presentacion\Venta\GUI_Ventas_Cobrar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\GUI_Ventas_Reporte.Designer.vb">
+    <Compile Include="Presentacion\Venta\GUI_Ventas_Reporte.Designer.vb">
       <DependentUpon>GUI_Ventas_Reporte.vb</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\GUI_Ventas_Reporte.vb">
+    <Compile Include="Presentacion\Venta\GUI_Ventas_Reporte.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -183,10 +190,13 @@
     <EmbeddedResource Include="Presentacion\GUI_Login.resx">
       <DependentUpon>GUI_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\GUI_Ventas.resx">
+    <EmbeddedResource Include="Presentacion\Venta\GUI_Ventas.resx">
       <DependentUpon>GUI_Ventas.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\GUI_Ventas_Cobrar.resx">
+    <EmbeddedResource Include="Presentacion\Venta\GUI_Ventas_Agregar.resx">
+      <DependentUpon>GUI_Ventas_Agregar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Venta\GUI_Ventas_Cobrar.resx">
       <DependentUpon>GUI_Ventas_Cobrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -195,7 +205,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\GUI_Ventas_Reporte.resx">
+    <EmbeddedResource Include="Presentacion\Venta\GUI_Ventas_Reporte.resx">
       <DependentUpon>GUI_Ventas_Reporte.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

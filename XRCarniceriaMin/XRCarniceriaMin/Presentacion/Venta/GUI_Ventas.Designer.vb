@@ -41,6 +41,7 @@ Partial Class GUI_Ventas
         Me.btnConfig = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.btnArticulos = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnCobrar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -56,7 +57,6 @@ Partial Class GUI_Ventas
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.timFecha = New System.Windows.Forms.Timer(Me.components)
-        Me.btnArticulos = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -265,6 +265,19 @@ Partial Class GUI_Ventas
         Me.Panel5.Size = New System.Drawing.Size(383, 111)
         Me.Panel5.TabIndex = 11
         '
+        'btnArticulos
+        '
+        Me.btnArticulos.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnArticulos.FlatAppearance.BorderSize = 0
+        Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnArticulos.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnArticulos.Location = New System.Drawing.Point(198, 15)
+        Me.btnArticulos.Name = "btnArticulos"
+        Me.btnArticulos.Size = New System.Drawing.Size(80, 80)
+        Me.btnArticulos.TabIndex = 4
+        Me.btnArticulos.Text = "Productos"
+        Me.btnArticulos.UseVisualStyleBackColor = False
+        '
         'btnCancelar
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.AliceBlue
@@ -399,19 +412,6 @@ Partial Class GUI_Ventas
         '
         Me.timFecha.Enabled = True
         Me.timFecha.Interval = 1000
-        '
-        'btnArticulos
-        '
-        Me.btnArticulos.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnArticulos.FlatAppearance.BorderSize = 0
-        Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnArticulos.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnArticulos.Location = New System.Drawing.Point(198, 15)
-        Me.btnArticulos.Name = "btnArticulos"
-        Me.btnArticulos.Size = New System.Drawing.Size(80, 80)
-        Me.btnArticulos.TabIndex = 4
-        Me.btnArticulos.Text = "Productos"
-        Me.btnArticulos.UseVisualStyleBackColor = False
         '
         'GUI_Ventas
         '

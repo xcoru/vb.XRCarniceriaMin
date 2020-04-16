@@ -252,7 +252,7 @@ Partial Class GUI_Articulos
         'btnImagen
         '
         Me.btnImagen.Font = New System.Drawing.Font("Arial Narrow", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnImagen.Location = New System.Drawing.Point(5, 95)
+        Me.btnImagen.Location = New System.Drawing.Point(5, 66)
         Me.btnImagen.Name = "btnImagen"
         Me.btnImagen.Size = New System.Drawing.Size(216, 37)
         Me.btnImagen.TabIndex = 5
@@ -262,9 +262,10 @@ Partial Class GUI_Articulos
         'txtImagen
         '
         Me.txtImagen.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtImagen.Location = New System.Drawing.Point(5, 138)
+        Me.txtImagen.Location = New System.Drawing.Point(5, 109)
         Me.txtImagen.Multiline = True
         Me.txtImagen.Name = "txtImagen"
+        Me.txtImagen.ReadOnly = True
         Me.txtImagen.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.txtImagen.Size = New System.Drawing.Size(216, 89)
         Me.txtImagen.TabIndex = 4
