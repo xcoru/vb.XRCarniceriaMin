@@ -39,11 +39,11 @@ Partial Class GUI_Ventas_Cobrar
         '
         Me.Label1.BackColor = System.Drawing.Color.CornflowerBlue
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Arial", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(405, 52)
+        Me.Label1.Size = New System.Drawing.Size(405, 65)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Cobrar"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter

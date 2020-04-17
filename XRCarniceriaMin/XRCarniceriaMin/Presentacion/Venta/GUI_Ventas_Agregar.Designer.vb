@@ -97,11 +97,11 @@ Partial Class GUI_Ventas_Agregar
         '
         Me.Panel3.Controls.Add(Me.dgvDetalles)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 317)
+        Me.Panel3.Location = New System.Drawing.Point(0, 319)
         Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Padding = New System.Windows.Forms.Padding(7, 0, 7, 0)
-        Me.Panel3.Size = New System.Drawing.Size(363, 266)
+        Me.Panel3.Size = New System.Drawing.Size(363, 264)
         Me.Panel3.TabIndex = 3
         '
         'dgvDetalles
@@ -126,7 +126,7 @@ Partial Class GUI_Ventas_Agregar
         Me.dgvDetalles.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDetalles.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvDetalles.Size = New System.Drawing.Size(349, 266)
+        Me.dgvDetalles.Size = New System.Drawing.Size(349, 264)
         Me.dgvDetalles.TabIndex = 0
         '
         'Column1
@@ -205,7 +205,7 @@ Partial Class GUI_Ventas_Agregar
         Me.Panel1.Controls.Add(Me.txtPrecio)
         Me.Panel1.Controls.Add(Me.txtDescripcion)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 63)
+        Me.Panel1.Location = New System.Drawing.Point(0, 65)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(363, 254)
@@ -317,7 +317,7 @@ Partial Class GUI_Ventas_Agregar
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(363, 63)
+        Me.Label1.Size = New System.Drawing.Size(363, 65)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Detalles"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
