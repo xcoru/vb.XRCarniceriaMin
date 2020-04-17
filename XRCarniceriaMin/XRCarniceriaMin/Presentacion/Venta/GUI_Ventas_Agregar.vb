@@ -81,6 +81,8 @@ Public Class GUI_Ventas_Agregar
     Private Sub txtCantidad_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtCantidad.KeyPress
         If e.KeyChar = ChrW(13) Then
             Call BtnAgregar_Click(sender, e)
+        ElseIf e.KeyChar = "x" Or e.KeyChar = "X" Then
+            Close()
         End If
     End Sub
 
@@ -128,5 +130,11 @@ Public Class GUI_Ventas_Agregar
 
     Private Sub txtCantidad_KeyUp(sender As Object, e As KeyEventArgs) Handles txtCantidad.KeyUp
         CalcularMonto()
+    End Sub
+
+    Private Sub dgvDetalles_KeyPress(sender As Object, e As KeyPressEventArgs) Handles dgvDetalles.KeyPress
+        If e.KeyChar = "x" Or e.KeyChar = "X" Then
+            Close()
+        End If
     End Sub
 End Class

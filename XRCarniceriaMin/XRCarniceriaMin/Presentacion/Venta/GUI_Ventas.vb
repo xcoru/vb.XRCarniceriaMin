@@ -36,7 +36,9 @@
     End Sub
 
     Private Sub BtnCobrar_Click(sender As Object, e As EventArgs) Handles btnCobrar.Click
-        GUI_Ventas_Cobrar.ShowDialog()
+        If Val(txtTotal.Text > 0) Then
+            GUI_Ventas_Cobrar.ShowDialog()
+        End If
     End Sub
 
     Private Sub BtnConfig_Click(sender As Object, e As EventArgs) Handles btnConfig.Click
