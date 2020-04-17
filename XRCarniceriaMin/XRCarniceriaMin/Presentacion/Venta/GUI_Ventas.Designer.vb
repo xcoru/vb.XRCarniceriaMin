@@ -49,6 +49,7 @@ Partial Class GUI_Ventas
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.timFecha = New System.Windows.Forms.Timer(Me.components)
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -56,7 +57,6 @@ Partial Class GUI_Ventas
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.timFecha = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -75,7 +75,7 @@ Partial Class GUI_Ventas
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1222, 140)
+        Me.Panel1.Size = New System.Drawing.Size(1015, 140)
         Me.Panel1.TabIndex = 1
         '
         'Panel7
@@ -86,7 +86,7 @@ Partial Class GUI_Ventas
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel7.Location = New System.Drawing.Point(233, 0)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(684, 140)
+        Me.Panel7.Size = New System.Drawing.Size(477, 140)
         Me.Panel7.TabIndex = 2
         '
         'txtDireccion
@@ -97,7 +97,7 @@ Partial Class GUI_Ventas
         Me.txtDireccion.ForeColor = System.Drawing.Color.White
         Me.txtDireccion.Location = New System.Drawing.Point(0, 66)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(684, 37)
+        Me.txtDireccion.Size = New System.Drawing.Size(477, 37)
         Me.txtDireccion.TabIndex = 7
         Me.txtDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -109,7 +109,7 @@ Partial Class GUI_Ventas
         Me.txtTelefono.ForeColor = System.Drawing.Color.White
         Me.txtTelefono.Location = New System.Drawing.Point(0, 103)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(684, 37)
+        Me.txtTelefono.Size = New System.Drawing.Size(477, 37)
         Me.txtTelefono.TabIndex = 6
         Me.txtTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -121,7 +121,7 @@ Partial Class GUI_Ventas
         Me.txtEmpresa.ForeColor = System.Drawing.Color.White
         Me.txtEmpresa.Location = New System.Drawing.Point(0, 0)
         Me.txtEmpresa.Name = "txtEmpresa"
-        Me.txtEmpresa.Size = New System.Drawing.Size(684, 66)
+        Me.txtEmpresa.Size = New System.Drawing.Size(477, 66)
         Me.txtEmpresa.TabIndex = 4
         Me.txtEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -142,7 +142,7 @@ Partial Class GUI_Ventas
         Me.Panel2.Controls.Add(Me.txtFecha)
         Me.Panel2.Controls.Add(Me.txtUsuario)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(917, 0)
+        Me.Panel2.Location = New System.Drawing.Point(710, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(305, 140)
         Me.Panel2.TabIndex = 0
@@ -249,7 +249,7 @@ Partial Class GUI_Ventas
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 140)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1222, 111)
+        Me.Panel3.Size = New System.Drawing.Size(1015, 111)
         Me.Panel3.TabIndex = 2
         '
         'Panel5
@@ -260,7 +260,7 @@ Partial Class GUI_Ventas
         Me.Panel5.Controls.Add(Me.btnEgreso)
         Me.Panel5.Controls.Add(Me.btnConfig)
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel5.Location = New System.Drawing.Point(839, 0)
+        Me.Panel5.Location = New System.Drawing.Point(632, 0)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(383, 111)
         Me.Panel5.TabIndex = 11
@@ -346,7 +346,7 @@ Partial Class GUI_Ventas
         Me.Panel4.Location = New System.Drawing.Point(0, 251)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Padding = New System.Windows.Forms.Padding(15)
-        Me.Panel4.Size = New System.Drawing.Size(1222, 517)
+        Me.Panel4.Size = New System.Drawing.Size(1015, 382)
         Me.Panel4.TabIndex = 3
         '
         'dgvTabla
@@ -363,8 +363,13 @@ Partial Class GUI_Ventas
         Me.dgvTabla.Location = New System.Drawing.Point(15, 15)
         Me.dgvTabla.Name = "dgvTabla"
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTabla.Size = New System.Drawing.Size(1192, 487)
+        Me.dgvTabla.Size = New System.Drawing.Size(985, 352)
         Me.dgvTabla.TabIndex = 0
+        '
+        'timFecha
+        '
+        Me.timFecha.Enabled = True
+        Me.timFecha.Interval = 1000
         '
         'Column1
         '
@@ -374,7 +379,7 @@ Partial Class GUI_Ventas
         '
         'Column2
         '
-        Me.Column2.HeaderText = "Calve"
+        Me.Column2.HeaderText = "Clave"
         Me.Column2.Name = "Column2"
         Me.Column2.Width = 97
         '
@@ -408,16 +413,11 @@ Partial Class GUI_Ventas
         Me.Column7.Name = "Column7"
         Me.Column7.Width = 131
         '
-        'timFecha
-        '
-        Me.timFecha.Enabled = True
-        Me.timFecha.Interval = 1000
-        '
         'GUI_Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1222, 768)
+        Me.ClientSize = New System.Drawing.Size(1015, 633)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
@@ -449,13 +449,6 @@ Partial Class GUI_Ventas
     Friend WithEvents btnAgregar As Button
     Friend WithEvents Panel4 As Panel
     Friend WithEvents dgvTabla As DataGridView
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents txtFecha As Label
     Friend WithEvents txtUsuario As Label
     Friend WithEvents txtEmpresa As Label
@@ -471,4 +464,11 @@ Partial Class GUI_Ventas
     Friend WithEvents txtDireccion As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents btnArticulos As Button
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column7 As DataGridViewTextBoxColumn
 End Class

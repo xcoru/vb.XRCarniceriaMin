@@ -81,7 +81,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuracion\FP.vb" />
-    <Compile Include="Configuracion\ObjArticulo.vb" />
+    <Compile Include="Configuracion\Eventos.vb" />
+    <Compile Include="Configuracion\objArticulo.vb" />
     <Compile Include="Configuracion\VP.vb" />
     <Compile Include="Datos\D_Articulo.vb" />
     <Compile Include="Datos\D_Config.vb" />

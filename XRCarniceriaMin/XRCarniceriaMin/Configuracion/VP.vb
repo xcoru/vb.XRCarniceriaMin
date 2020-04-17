@@ -24,5 +24,7 @@
     Public _InicioCaja As Decimal = 0
     Public _MostrarErrores As Boolean = True         'True si se desea mostrar detalles de errores
 #End Region
-
+#Region "GUI_Ventas_Agregar"
+    Public objSeleccionado As New I_Articulo
+#End Region
 End Module

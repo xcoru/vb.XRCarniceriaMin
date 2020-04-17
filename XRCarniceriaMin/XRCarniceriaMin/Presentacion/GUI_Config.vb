@@ -21,7 +21,7 @@
         Try
             imgLogoTipo.BackgroundImage = Image.FromFile(txtLogotipo.Text)
         Catch ex As Exception
-            _Error(ex)
+            X(ex)
         End Try
     End Sub
 
@@ -64,7 +64,7 @@
             objConfig.Id_config = 1
             objConfig.Impresora = txtImpresora.Text
         Catch ex As Exception
-            _Error(ex)
+            X(ex)
         End Try
 
         Try
@@ -77,7 +77,7 @@
                 response = False
             End If
         Catch ex As Exception
-            _Error(ex)
+            X(ex)
         End Try
 
         If response Then
@@ -101,7 +101,7 @@
             imgLogoTipo.BackgroundImage = Image.FromFile(_negocio_logotipo)
             txtImpresora.Text = _config_impresora
         Catch ex As Exception
-            _Error(ex)
+            X(ex)
         End Try
 
     End Sub

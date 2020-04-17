@@ -15,14 +15,14 @@
             _negocio_logotipo = resNegocio.Tables(0).Rows(0)(5).ToString
 
         Catch ex As Exception
-            _Error(ex)
+            X(ex)
         End Try
 
         Try
             resConfig = dbConfig.Consulta(1)
             _config_impresora = resConfig.Tables(0).Rows(0)(1).ToString
         Catch ex As Exception
-            _Error(ex)
+            X(ex)
         End Try
 
     End Sub
@@ -51,7 +51,7 @@
         MsgBox(mensaje, vbOKOnly + op, _negocio_nombre)
 
     End Sub
-    Public Sub _Error(ByVal Optional ex As Exception = Nothing)
+    Public Sub X(ByVal Optional ex As Exception = Nothing)
         If _MostrarErrores Then
             msg(ex.Message + " TTT " + ex.StackTrace, 3)
         End If

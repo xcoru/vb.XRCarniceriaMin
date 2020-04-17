@@ -25,10 +25,10 @@
             Try
                 txtLogotipo.BackgroundImage = Image.FromFile(_negocio_logotipo)
             Catch ex As Exception
-                _Error(ex)
+                X(ex)
             End Try
         Catch ex As Exception
-            _Error(ex)
+            X(ex)
         End Try
 
     End Sub
