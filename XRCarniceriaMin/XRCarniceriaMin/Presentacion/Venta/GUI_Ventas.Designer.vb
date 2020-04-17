@@ -54,8 +54,8 @@ Partial Class GUI_Ventas
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
@@ -306,7 +306,9 @@ Partial Class GUI_Ventas
         '
         'Label4
         '
-        Me.Label4.BackColor = System.Drawing.Color.Lavender
+        Me.Label4.BackColor = System.Drawing.Color.Green
+        Me.Label4.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(198, 15)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(276, 39)
@@ -316,13 +318,14 @@ Partial Class GUI_Ventas
         '
         'txtTotal
         '
-        Me.txtTotal.BackColor = System.Drawing.Color.LightGoldenrodYellow
-        Me.txtTotal.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.ForeColor = System.Drawing.Color.DodgerBlue
+        Me.txtTotal.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.txtTotal.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTotal.ForeColor = System.Drawing.Color.Blue
         Me.txtTotal.Location = New System.Drawing.Point(198, 54)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(276, 41)
         Me.txtTotal.TabIndex = 7
+        Me.txtTotal.Text = "0.00"
         Me.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'btnAgregar
@@ -352,13 +355,14 @@ Partial Class GUI_Ventas
         'dgvTabla
         '
         Me.dgvTabla.AllowUserToAddRows = False
+        Me.dgvTabla.AllowUserToDeleteRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.Azure
         Me.dgvTabla.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvTabla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgvTabla.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgvTabla.BackgroundColor = System.Drawing.Color.White
         Me.dgvTabla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvTabla.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.dgvTabla.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column6, Me.Column5, Me.Column7})
         Me.dgvTabla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvTabla.Location = New System.Drawing.Point(15, 15)
         Me.dgvTabla.Name = "dgvTabla"
@@ -395,17 +399,17 @@ Partial Class GUI_Ventas
         Me.Column4.Name = "Column4"
         Me.Column4.Width = 104
         '
-        'Column5
-        '
-        Me.Column5.HeaderText = "Tipo"
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 82
-        '
         'Column6
         '
         Me.Column6.HeaderText = "Cantidad"
         Me.Column6.Name = "Column6"
         Me.Column6.Width = 134
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "Tipo"
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 82
         '
         'Column7
         '
@@ -468,7 +472,7 @@ Partial Class GUI_Ventas
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
 End Class

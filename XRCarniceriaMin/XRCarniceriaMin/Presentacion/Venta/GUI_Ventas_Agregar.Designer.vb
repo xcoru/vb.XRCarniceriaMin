@@ -24,7 +24,6 @@ Partial Class GUI_Ventas_Agregar
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Ventas_Agregar))
         Me.P_Body = New System.Windows.Forms.Panel()
         Me.Tabla = New System.Windows.Forms.FlowLayoutPanel()
@@ -39,6 +38,8 @@ Partial Class GUI_Ventas_Agregar
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnTerminar = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtMonto = New System.Windows.Forms.Label()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
@@ -60,9 +61,9 @@ Partial Class GUI_Ventas_Agregar
         Me.P_Body.Controls.Add(Me.P_Aside)
         Me.P_Body.Dock = System.Windows.Forms.DockStyle.Fill
         Me.P_Body.Location = New System.Drawing.Point(0, 0)
-        Me.P_Body.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.P_Body.Margin = New System.Windows.Forms.Padding(2)
         Me.P_Body.Name = "P_Body"
-        Me.P_Body.Size = New System.Drawing.Size(1114, 845)
+        Me.P_Body.Size = New System.Drawing.Size(884, 661)
         Me.P_Body.TabIndex = 2
         '
         'Tabla
@@ -72,9 +73,9 @@ Partial Class GUI_Ventas_Agregar
         Me.Tabla.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Tabla.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Tabla.Location = New System.Drawing.Point(0, 0)
-        Me.Tabla.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Tabla.Margin = New System.Windows.Forms.Padding(2)
         Me.Tabla.Name = "Tabla"
-        Me.Tabla.Size = New System.Drawing.Size(751, 845)
+        Me.Tabla.Size = New System.Drawing.Size(521, 661)
         Me.Tabla.TabIndex = 1
         '
         'P_Aside
@@ -86,21 +87,21 @@ Partial Class GUI_Ventas_Agregar
         Me.P_Aside.Controls.Add(Me.Panel1)
         Me.P_Aside.Controls.Add(Me.Label1)
         Me.P_Aside.Dock = System.Windows.Forms.DockStyle.Right
-        Me.P_Aside.Location = New System.Drawing.Point(751, 0)
-        Me.P_Aside.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.P_Aside.Location = New System.Drawing.Point(521, 0)
+        Me.P_Aside.Margin = New System.Windows.Forms.Padding(2)
         Me.P_Aside.Name = "P_Aside"
-        Me.P_Aside.Size = New System.Drawing.Size(363, 845)
+        Me.P_Aside.Size = New System.Drawing.Size(363, 661)
         Me.P_Aside.TabIndex = 0
         '
         'Panel3
         '
         Me.Panel3.Controls.Add(Me.dgvDetalles)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(0, 281)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel3.Location = New System.Drawing.Point(0, 317)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Padding = New System.Windows.Forms.Padding(7, 0, 7, 0)
-        Me.Panel3.Size = New System.Drawing.Size(363, 486)
+        Me.Panel3.Size = New System.Drawing.Size(363, 266)
         Me.Panel3.TabIndex = 3
         '
         'dgvDetalles
@@ -116,22 +117,16 @@ Partial Class GUI_Ventas_Agregar
         Me.dgvDetalles.BackgroundColor = System.Drawing.Color.White
         Me.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDetalles.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column5, Me.Column2, Me.Column3, Me.Column4})
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvDetalles.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDetalles.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvDetalles.Location = New System.Drawing.Point(7, 0)
-        Me.dgvDetalles.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvDetalles.Margin = New System.Windows.Forms.Padding(2)
         Me.dgvDetalles.Name = "dgvDetalles"
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDetalles.RowsDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvDetalles.ReadOnly = True
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvDetalles.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvDetalles.RowTemplate.DefaultCellStyle.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvDetalles.Size = New System.Drawing.Size(349, 486)
+        Me.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvDetalles.Size = New System.Drawing.Size(349, 266)
         Me.dgvDetalles.TabIndex = 0
         '
         'Column1
@@ -176,8 +171,8 @@ Partial Class GUI_Ventas_Agregar
         Me.Panel2.BackColor = System.Drawing.Color.Lavender
         Me.Panel2.Controls.Add(Me.btnTerminar)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Panel2.Location = New System.Drawing.Point(0, 767)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel2.Location = New System.Drawing.Point(0, 583)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(363, 78)
         Me.Panel2.TabIndex = 2
@@ -191,7 +186,7 @@ Partial Class GUI_Ventas_Agregar
         Me.btnTerminar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnTerminar.ForeColor = System.Drawing.Color.White
         Me.btnTerminar.Location = New System.Drawing.Point(5, 6)
-        Me.btnTerminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnTerminar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnTerminar.Name = "btnTerminar"
         Me.btnTerminar.Size = New System.Drawing.Size(348, 50)
         Me.btnTerminar.TabIndex = 13
@@ -201,6 +196,8 @@ Partial Class GUI_Ventas_Agregar
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Lavender
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.txtMonto)
         Me.Panel1.Controls.Add(Me.btnAgregar)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.txtCantidad)
@@ -209,10 +206,35 @@ Partial Class GUI_Ventas_Agregar
         Me.Panel1.Controls.Add(Me.txtDescripcion)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 63)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(363, 218)
+        Me.Panel1.Size = New System.Drawing.Size(363, 254)
         Me.Panel1.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label2.Location = New System.Drawing.Point(129, 145)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(105, 27)
+        Me.Label2.TabIndex = 14
+        Me.Label2.Text = "Monto: $"
+        '
+        'txtMonto
+        '
+        Me.txtMonto.BackColor = System.Drawing.Color.Lavender
+        Me.txtMonto.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMonto.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.txtMonto.Location = New System.Drawing.Point(231, 140)
+        Me.txtMonto.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.txtMonto.Name = "txtMonto"
+        Me.txtMonto.Size = New System.Drawing.Size(125, 36)
+        Me.txtMonto.TabIndex = 13
+        Me.txtMonto.Text = "0"
+        Me.txtMonto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnAgregar
         '
@@ -222,8 +244,8 @@ Partial Class GUI_Ventas_Agregar
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAgregar.ForeColor = System.Drawing.Color.White
-        Me.btnAgregar.Location = New System.Drawing.Point(5, 147)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAgregar.Location = New System.Drawing.Point(5, 186)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(348, 50)
         Me.btnAgregar.TabIndex = 12
@@ -245,10 +267,12 @@ Partial Class GUI_Ventas_Agregar
         '
         Me.txtCantidad.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCantidad.Location = New System.Drawing.Point(138, 98)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2)
+        Me.txtCantidad.MaxLength = 20
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(218, 35)
         Me.txtCantidad.TabIndex = 10
+        Me.txtCantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label3
         '
@@ -302,11 +326,11 @@ Partial Class GUI_Ventas_Agregar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1114, 845)
+        Me.ClientSize = New System.Drawing.Size(884, 661)
         Me.Controls.Add(Me.P_Body)
         Me.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MinimizeBox = False
         Me.Name = "GUI_Ventas_Agregar"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -342,4 +366,6 @@ Partial Class GUI_Ventas_Agregar
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtMonto As Label
 End Class

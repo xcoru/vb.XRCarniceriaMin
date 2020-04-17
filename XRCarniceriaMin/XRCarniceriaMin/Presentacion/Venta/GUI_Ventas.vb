@@ -1,4 +1,6 @@
 ﻿Public Class GUI_Ventas
+    Dim LineaIndice As Integer
+
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
         Dim op As Integer
         op = MsgBox("¿Esta seguro de salir?", vbExclamation + vbYesNo, _negocio_nombre)
@@ -52,4 +54,22 @@
     Private Sub BtnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         GUI_Ventas_Agregar.ShowDialog()
     End Sub
+
+    Private Sub BtnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
+        Dim op As Integer
+        op = MsgBox("¿Esta seguro de cancelar la venta actual?", vbExclamation + vbYesNo, _negocio_nombre)
+        If op = vbYes Then
+            BorrarVenta()
+        End If
+    End Sub
+
+    Private Sub BorrarVenta()
+        dgvTabla.Rows.Clear()
+        GUI_Ventas_Agregar.dgvDetalles.Rows.Clear()
+        GUI_Ventas_Agregar.txtDescripcion.Text = ""
+        GUI_Ventas_Agregar.txtPrecio.Text = ""
+        GUI_Ventas_Agregar.txtCantidad.Text = ""
+        txtTotal.Text = "0.00"
+    End Sub
+
 End Class

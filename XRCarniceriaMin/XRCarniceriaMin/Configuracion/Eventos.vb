@@ -41,7 +41,10 @@
                     With GUI_Ventas_Agregar
                         .txtDescripcion.Text = objSeleccionado.Descripcion
                         .txtPrecio.Text = objSeleccionado.Precio
+                        .CalcularMonto()
+                        .txtCantidad.Select()
                     End With
+
                 End If
             End If
         Catch ex As Exception
