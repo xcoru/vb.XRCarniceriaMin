@@ -4,14 +4,10 @@
         txtEfectivo.Select()
     End Sub
 
-    Private Sub TxtEfectivo_TextChanged(sender As Object, e As EventArgs) Handles txtEfectivo.TextChanged
-
-    End Sub
-
     Private Sub txtEfectivo_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtEfectivo.KeyPress
-        If Not e.KeyChar = "." And Not IsNumeric(e.KeyChar) Then
-            e.KeyChar = Nothing
-        End If
+
+
+
     End Sub
 
     Private Sub txtEfectivo_KeyUp(sender As Object, e As KeyEventArgs) Handles txtEfectivo.KeyUp
@@ -40,13 +36,14 @@
     End Sub
 
     Private Sub cobrar()
+
         If Val(txtTotal.Text) > Val(txtEfectivo.Text) Then
             msg("¡Efectivo insuficiente!", 3)
             txtEfectivo.Select()
             Exit Sub
+        Else
+            txtCambio.Text = Format(Val(txtEfectivo.Text) - Val(txtTotal.Text), "#,###,##0.00")
         End If
 
-
     End Sub
-
 End Class
