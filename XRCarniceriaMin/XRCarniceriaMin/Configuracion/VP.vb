@@ -19,9 +19,10 @@
 #Region "Config"
     Public _config_impresora As String = ""
 #End Region
-
-#Region "General"
+#Region "GUI_Caja_Corte"
     Public _InicioCaja As Decimal = 0
+#End Region
+#Region "General"
     Public _MostrarErrores As Boolean = True         'True si se desea mostrar detalles de errores
 #End Region
 #Region "GUI_Ventas_Agregar"

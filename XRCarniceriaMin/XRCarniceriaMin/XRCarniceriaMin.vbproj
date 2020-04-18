@@ -87,11 +87,13 @@
     <Compile Include="Datos\D_Articulo.vb" />
     <Compile Include="Datos\D_Config.vb" />
     <Compile Include="Datos\Conexion.vb" />
+    <Compile Include="Datos\D_Egreso.vb" />
     <Compile Include="Datos\D_Negocio.vb" />
     <Compile Include="Datos\D_Usuario.vb" />
     <Compile Include="Datos\D_Ventas.vb" />
     <Compile Include="Identidad\I_Articulo.vb" />
     <Compile Include="Identidad\I_Config.vb" />
+    <Compile Include="Identidad\I_Egreso.vb" />
     <Compile Include="Identidad\I_Negocio.vb" />
     <Compile Include="Identidad\I_Usuario.vb" />
     <Compile Include="Identidad\I_Ventas.vb" />
@@ -123,6 +125,12 @@
       <DependentUpon>GUI_Config.vb</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\GUI_Config.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\GUI_Egreso.Designer.vb">
+      <DependentUpon>GUI_Egreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\GUI_Egreso.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\GUI_Login.vb">
@@ -187,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\GUI_Config.resx">
       <DependentUpon>GUI_Config.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\GUI_Egreso.resx">
+      <DependentUpon>GUI_Egreso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\GUI_Login.resx">
       <DependentUpon>GUI_Login.vb</DependentUpon>

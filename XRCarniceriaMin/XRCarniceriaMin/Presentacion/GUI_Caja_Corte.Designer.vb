@@ -25,7 +25,7 @@ Partial Class GUI_Caja_Corte
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Caja_Corte))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnAtras = New System.Windows.Forms.Button()
         Me.txtEgresoCaja = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnImprimir = New System.Windows.Forms.Button()
@@ -38,6 +38,7 @@ Partial Class GUI_Caja_Corte
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,7 +60,8 @@ Partial Class GUI_Caja_Corte
         '
         'Panel1
         '
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btnSalir)
+        Me.Panel1.Controls.Add(Me.btnAtras)
         Me.Panel1.Controls.Add(Me.txtEgresoCaja)
         Me.Panel1.Controls.Add(Me.Label10)
         Me.Panel1.Controls.Add(Me.btnImprimir)
@@ -76,18 +78,18 @@ Partial Class GUI_Caja_Corte
         Me.Panel1.Size = New System.Drawing.Size(927, 218)
         Me.Panel1.TabIndex = 9
         '
-        'Button1
+        'btnAtras
         '
-        Me.Button1.BackColor = System.Drawing.Color.Tomato
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(756, 120)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(146, 41)
-        Me.Button1.TabIndex = 27
-        Me.Button1.Text = "Atras"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnAtras.BackColor = System.Drawing.Color.Tomato
+        Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAtras.ForeColor = System.Drawing.Color.White
+        Me.btnAtras.Location = New System.Drawing.Point(602, 75)
+        Me.btnAtras.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnAtras.Name = "btnAtras"
+        Me.btnAtras.Size = New System.Drawing.Size(146, 41)
+        Me.btnAtras.TabIndex = 27
+        Me.btnAtras.Text = "Atras"
+        Me.btnAtras.UseVisualStyleBackColor = False
         '
         'txtEgresoCaja
         '
@@ -226,6 +228,19 @@ Partial Class GUI_Caja_Corte
         Me.dgvTabla.Size = New System.Drawing.Size(907, 284)
         Me.dgvTabla.TabIndex = 9
         '
+        'btnSalir
+        '
+        Me.btnSalir.BackColor = System.Drawing.Color.Red
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSalir.ForeColor = System.Drawing.Color.White
+        Me.btnSalir.Location = New System.Drawing.Point(756, 121)
+        Me.btnSalir.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(146, 41)
+        Me.btnSalir.TabIndex = 28
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = False
+        '
         'GUI_Caja_Corte
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 27.0!)
@@ -253,7 +268,7 @@ Partial Class GUI_Caja_Corte
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAtras As Button
     Friend WithEvents txtEgresoCaja As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents btnImprimir As Button
@@ -266,4 +281,5 @@ Partial Class GUI_Caja_Corte
     Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents dgvTabla As DataGridView
+    Friend WithEvents btnSalir As Button
 End Class

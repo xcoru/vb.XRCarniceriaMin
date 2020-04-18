@@ -57,5 +57,13 @@
         End If
     End Sub
 
+    ''' <summary>
+    ''' Retorna cadena con formato 2 decimales
+    ''' </summary>
+    ''' <param name="Num"></param>
+    ''' <returns></returns>
+    Public Function FNumero(ByVal Num As Decimal) As String
+        Return Format(Num, "#,###,##0.00")
+    End Function
 
 End Module

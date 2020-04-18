@@ -435,7 +435,7 @@ DROP PROCEDURE IF EXISTS ventas_mostrar;
 CREATE PROCEDURE ventas_mostrar()
    BEGIN
 		SELECT 
-			id_venta	AS	 'ID',
+			id_venta	AS	 'Id',
 			folio		AS	 'Folio',
 			id_usuario 	AS	 'Usuario',
 			id_catalogo AS	 'ID Catalogo',
@@ -576,6 +576,122 @@ CREATE PROCEDURE ventas_filtrar(
 			hora		AS	 'Hora',
 			fecha		AS	 'Fecha',
 			estado		AS	 'estado'
-        FROM ventas WHERE fecha BETWEEN fecha_ini AND fecha_fin LIMIT 5;
+        FROM ventas WHERE fecha BETWEEN fecha_ini AND fecha_fin LIMIT 1000;
    END //
 DELIMITER ;
+
+
+#TABLA EGRESO *********** TABLA EGRESO ***********TABLA EGRESO *********************************************************************************
+
+
+
+DROP PROCEDURE IF EXISTS egreso_mostrar;
+ DELIMITER //
+CREATE PROCEDURE egreso_mostrar()
+   BEGIN
+		SELECT 
+			id_egreso	AS	 'Id',
+			id_usuario 	AS	 'Usuario',
+			concepto 	AS	 'Concepto',
+			monto 		AS	 'Monto',
+			hora		AS	 'Hora',
+			fecha		AS	 'Fecha'
+		FROM egreso;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS egreso_consultar;
+ DELIMITER //
+CREATE PROCEDURE egreso_consultar(IN id_ INT)
+   BEGIN
+		SELECT 
+			id_egreso	AS	 'Id',
+			id_usuario 	AS	 'Usuario',
+			concepto 	AS	 'Concepto',
+			monto 		AS	 'Monto',
+			hora		AS	 'Hora',
+			fecha		AS	 'Fecha'
+		FROM egreso
+        WHERE id_egreso = id_;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS egreso_insertar;
+ DELIMITER //
+CREATE PROCEDURE egreso_insertar(
+	IN campo1   VARCHAR(20), 
+    IN campo2	VARCHAR(250),
+    IN campo3 	DEC(10,2),
+	IN campo4 	VARCHAR(20),
+    IN campo5 	DATE
+)
+   BEGIN
+		INSERT INTO egreso(
+			id_usuario, 
+			concepto, 
+			monto, 
+			hora,
+			fecha
+            ) 
+		VALUES(
+			campo1,
+			campo2,
+			campo3,
+			campo4,
+			campo5
+            );
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS egreso_editar;
+ DELIMITER //
+CREATE PROCEDURE egreso_editar(
+	IN campo1   INT, 
+	IN campo2   VARCHAR(20), 
+    IN campo3	VARCHAR(250),
+    IN campo4 	DEC(10,2),
+	IN campo5 	VARCHAR(20),
+    IN campo6 	DATE
+)
+   BEGIN
+		UPDATE egreso SET 
+			id_usuario		= campo2, 
+			concepto		= campo3, 
+			monto			= campo4, 
+			hora			= campo5,
+			fecha			= campo6
+		WHERE id_egreso  	= campo1;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS egreso_eliminar;
+ DELIMITER //
+CREATE PROCEDURE egreso_eliminar(IN id_ INT)
+   BEGIN
+		DELETE FROM egreso WHERE id_egreso = id_;
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS egreso_filtrar;
+ DELIMITER //
+CREATE PROCEDURE egreso_filtrar(
+	IN fecha_ini DATE,
+	IN fecha_fin DATE
+)
+   BEGIN
+		SELECT 
+			id_egreso	AS	 'Id',
+			id_usuario 	AS	 'Usuario',
+			concepto 	AS	 'Concepto',
+			monto 		AS	 'Monto',
+			hora		AS	 'Hora',
+			fecha		AS	 'Fecha'
+        FROM egreso WHERE fecha BETWEEN fecha_ini AND fecha_fin LIMIT 1000;
+   END //
+DELIMITER ;
+

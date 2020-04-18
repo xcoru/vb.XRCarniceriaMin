@@ -84,6 +84,20 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `xrcarniceriamin`.`egreso`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`egreso` (
+  `id_egreso` INT NOT NULL AUTO_INCREMENT,
+  `id_usuario` VARCHAR(20) NULL,
+  `concepto` VARCHAR(250) NULL,
+  `monto` DECIMAL(10,2) NULL,
+  `hora` VARCHAR(20) NULL,
+  `fecha` DATE NULL,
+  PRIMARY KEY (`id_egreso`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Data for table `xrcarniceriamin`.`usuario`
 -- -----------------------------------------------------
 START TRANSACTION;
