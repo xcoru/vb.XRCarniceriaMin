@@ -32,7 +32,7 @@ Public Class D_Egreso
                 .Add("campo3", MySqlDbType.VarChar).Value = _Elemento.Concepto
                 .Add("campo4", MySqlDbType.Decimal).Value = _Elemento.Monto
                 .Add("campo5", MySqlDbType.VarChar).Value = _Elemento.Hora
-                .Add("campo6", MySqlDbType.Date).Value = _Elemento.Fecha
+                .Add("campo6", MySqlDbType.Date).Value = Format(CDate(_Elemento.Fecha), "yyyy/MM/dd").ToString
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception

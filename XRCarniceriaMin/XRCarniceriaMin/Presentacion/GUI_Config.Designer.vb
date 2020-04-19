@@ -187,7 +187,7 @@ Partial Class GUI_Config
         '
         'btnGuardar
         '
-        Me.btnGuardar.BackColor = System.Drawing.Color.LimeGreen
+        Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.White
@@ -210,7 +210,7 @@ Partial Class GUI_Config
         '
         'btnAtras
         '
-        Me.btnAtras.BackColor = System.Drawing.Color.Tomato
+        Me.btnAtras.BackColor = System.Drawing.Color.Red
         Me.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAtras.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAtras.ForeColor = System.Drawing.Color.White

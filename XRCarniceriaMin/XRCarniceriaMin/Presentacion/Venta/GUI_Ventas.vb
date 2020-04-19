@@ -74,4 +74,7 @@
         txtTotal.Text = "0.00"
     End Sub
 
+    Private Sub BtnEgreso_Click(sender As Object, e As EventArgs) Handles btnEgreso.Click
+        GUI_Egreso.ShowDialog()
+    End Sub
 End Class

@@ -621,11 +621,12 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS egreso_insertar;
  DELIMITER //
 CREATE PROCEDURE egreso_insertar(
-	IN campo1   VARCHAR(20), 
-    IN campo2	VARCHAR(250),
-    IN campo3 	DEC(10,2),
-	IN campo4 	VARCHAR(20),
-    IN campo5 	DATE
+	IN campo1	INT,
+	IN campo2   VARCHAR(20), 
+    IN campo3	VARCHAR(250),
+    IN campo4 	DEC(10,2),
+	IN campo5 	VARCHAR(20),
+    IN campo6 	DATE
 )
    BEGIN
 		INSERT INTO egreso(
@@ -636,11 +637,11 @@ CREATE PROCEDURE egreso_insertar(
 			fecha
             ) 
 		VALUES(
-			campo1,
 			campo2,
 			campo3,
 			campo4,
-			campo5
+			campo5,
+			campo6
             );
    END //
 DELIMITER ;

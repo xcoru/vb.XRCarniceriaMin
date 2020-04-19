@@ -49,7 +49,6 @@ Partial Class GUI_Ventas
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
-        Me.timFecha = New System.Windows.Forms.Timer(Me.components)
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,6 +56,7 @@ Partial Class GUI_Ventas
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.timFecha = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -212,7 +212,6 @@ Partial Class GUI_Ventas
         'btnEgreso
         '
         Me.btnEgreso.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnEgreso.Enabled = False
         Me.btnEgreso.FlatAppearance.BorderSize = 0
         Me.btnEgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEgreso.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -370,11 +369,6 @@ Partial Class GUI_Ventas
         Me.dgvTabla.Size = New System.Drawing.Size(985, 352)
         Me.dgvTabla.TabIndex = 0
         '
-        'timFecha
-        '
-        Me.timFecha.Enabled = True
-        Me.timFecha.Interval = 1000
-        '
         'Column1
         '
         Me.Column1.HeaderText = "No"
@@ -416,6 +410,11 @@ Partial Class GUI_Ventas
         Me.Column7.HeaderText = "SubTotal"
         Me.Column7.Name = "Column7"
         Me.Column7.Width = 131
+        '
+        'timFecha
+        '
+        Me.timFecha.Enabled = True
+        Me.timFecha.Interval = 1000
         '
         'GUI_Ventas
         '
