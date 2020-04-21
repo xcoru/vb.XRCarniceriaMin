@@ -477,7 +477,7 @@ CREATE PROCEDURE ventas_insertar(
     IN campo3 	VARCHAR(20),
 	IN campo4 	VARCHAR(20),
     IN campo5 	DEC(10,2),
-	IN campo6 	DEC(10,2),
+	IN campo6 	FLOAT(10,3),
 	IN campo7 	DEC(10,2),
 	IN campo8 	VARCHAR(20),
 	IN campo9 	DATE
@@ -515,7 +515,7 @@ CREATE PROCEDURE ventas_editar(
     IN campo3 	VARCHAR(20),
 	IN campo4 	VARCHAR(20),
     IN campo5 	DEC(10,2),
-	IN campo6 	DEC(10,2),
+	IN campo6 	FLOAT(10,3),
 	IN campo7 	DEC(10,2),
 	IN campo8 	VARCHAR(20),
 	IN campo9 	DATE
@@ -584,16 +584,19 @@ CREATE PROCEDURE ventas_corte_caja(
 )
    BEGIN
 		SELECT 
+			a.folio AS "Folio",
 			a.id_articulo AS "Clave A.", 
 			b.descripcion AS "Producto", 
 			b.precio AS "Precio", 
-			a.cantidad AS "Cantidad", 
+			a.cantidad AS "Cantidad",
+			b.tipo AS "U.M.",
 			a.subtotal AS "Subtotal", 
 			a.hora AS "Hora"
 		FROM ventas a
 		INNER JOIN articulo AS b 
 		ON a.id_articulo = b.id_articulo 
-		AND a.fecha = _fecha;
+		AND a.fecha = _fecha
+		ORDER BY a.folio;
    END //
 DELIMITER ;
 

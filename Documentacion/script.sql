@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`ventas` (
   `id_usuario` VARCHAR(20) NULL,
   `id_articulo` VARCHAR(20) NULL,
   `precio` DECIMAL(10,2) NULL,
-  `cantidad` DECIMAL(10,2) NULL DEFAULT 0,
+  `cantidad` FLOAT(10,3) NULL DEFAULT 0,
   `subtotal` DECIMAL(10,2) NULL,
   `hora` VARCHAR(20) NULL,
   `fecha` DATE NULL,

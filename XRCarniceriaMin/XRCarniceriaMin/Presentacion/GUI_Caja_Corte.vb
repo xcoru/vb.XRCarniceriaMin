@@ -13,7 +13,7 @@
 
     Private Sub GUI_Caja_Corte_Load(sender As Object, e As EventArgs) Handles Me.Load
         Dim dbVentas As New D_Ventas
-
+        txtTitulo.Text = "Corte de Caja  <|>  " + Now.ToLongDateString
         txtInicioCaja.Text = FNumero(_InicioCaja)
         CargarDatos()
     End Sub
@@ -51,7 +51,7 @@
             dgvVentas.DataSource = resVentas.Tables(0)
 
             For Each LineaVentas In dgvVentas.Rows
-                TotalVentas += LineaVentas.Cells(4).Value
+                TotalVentas += LineaVentas.Cells(6).Value
             Next
 
             txtVentasdia.Text = Format(TotalVentas, "#,###,##0.00")

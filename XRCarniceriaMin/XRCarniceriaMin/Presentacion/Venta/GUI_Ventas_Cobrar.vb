@@ -48,16 +48,49 @@
         Dim dbVenta As New D_Ventas
         Dim iventa As New I_Ventas
         Dim linea As DataGridViewRow
+        Dim Folio As Integer
+        Dim Hora As String = Now.ToShortTimeString
+        Dim Fecha As String = Format(Now.Date, "yyyy/MM/dd")
+        Dim res As Boolean = True
+
+        Folio = dbVenta.getFolio
+        If Folio < 1000 Then
+            Folio = 1000
+        End If
 
         For Each linea In GUI_Ventas.dgvTabla.Rows
             Try
                 With iventa
-
+                    .Folio = Folio
+                    .Id_usuario = _usuario_id_usuario
+                    .Id_articulo = linea.Cells(1).Value
+                    .Precio = linea.Cells(3).Value
+                    .Cantidad = linea.Cells(4).Value
+                    .Subtotal = linea.Cells(6).Value
+                    .Hora = Hora
+                    .Fecha = Fecha
                 End With
+                If Not dbVenta.Insertar(iventa) Then
+                    res = False
+                    Exit For
+                End If
+
             Catch ex As Exception
+                res = False
                 X(ex)
             End Try
         Next
+
+        If res Then
+            msg("Venta Registrada!")
+            txtCambio.Text = 0
+            txtEfectivo.Text = ""
+            txtTotal.Text = 0
+            GUI_Ventas.BorrarVenta()
+            close
+        Else
+            msg("Error al guardar!", 3)
+        End If
 
     End Sub
 End Class

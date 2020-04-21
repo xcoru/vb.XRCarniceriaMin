@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class D_Negocio
-    Dim objCon As New Conexion
+
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
     Dim Comando As New MySqlCommand
@@ -21,6 +21,7 @@ Public Class D_Negocio
 
     'Esta funcion se encarga de agregar, editar registros en la tabla articulo
     Private Function QueryM(ByVal Cadena As String, ByVal _Elemento As I_Negocio) As Boolean
+        Dim objCon As New Conexion
         cn = objCon.conectar
         Dim Estado As Boolean = False
         Try
@@ -39,7 +40,7 @@ Public Class D_Negocio
         Catch ex As Exception
             MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, _negocio_nombre)
         End Try
-
+        objCon.Cerrar()
         Return Estado
 
     End Function
@@ -96,6 +97,7 @@ Public Class D_Negocio
 
     'Esta funcion contiene los datos de coneccion y consulta a la Base de datos
     Private Function QueryC(ByVal Cadena As String) As DataSet
+        Dim objCon As New Conexion
         Dim ds As New DataSet
         Try
             cn = objCon.conectar
@@ -105,6 +107,11 @@ Public Class D_Negocio
             da.Dispose()
             cn.Close()
             cn.Dispose()
+            Try
+                objCon.Cerrar()
+            Catch ex As Exception
+                X(ex)
+            End Try
             Return ds
             ds.Dispose()
         Catch ex As Exception

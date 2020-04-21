@@ -65,7 +65,7 @@
         End If
     End Sub
 
-    Private Sub BorrarVenta()
+    Public Sub BorrarVenta()
         dgvTabla.Rows.Clear()
         GUI_Ventas_Agregar.dgvDetalles.Rows.Clear()
         GUI_Ventas_Agregar.txtDescripcion.Text = ""

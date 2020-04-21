@@ -1,6 +1,5 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class D_Ventas
-    Dim objCon As New Conexion
     Dim cn As MySqlConnection
     Dim da As MySqlDataAdapter
     Dim Comando As New MySqlCommand
@@ -21,6 +20,7 @@ Public Class D_Ventas
 
     'Esta funcion se encarga de agregar, editar registros en la tabla articulo
     Private Function QueryM(ByVal Cadena As String, ByVal _Elemento As I_Ventas) As Boolean
+        Dim objCon As New Conexion
         cn = objCon.conectar
         Dim Estado As Boolean = False
         Try
@@ -33,7 +33,7 @@ Public Class D_Ventas
                 .Add("campo3", MySqlDbType.VarChar).Value = _Elemento.Id_usuario
                 .Add("campo4", MySqlDbType.VarChar).Value = _Elemento.Id_articulo
                 .Add("campo5", MySqlDbType.Decimal).Value = _Elemento.Precio
-                .Add("campo6", MySqlDbType.Decimal).Value = _Elemento.Cantidad
+                .Add("campo6", MySqlDbType.Float).Value = _Elemento.Cantidad
                 .Add("campo7", MySqlDbType.Decimal).Value = _Elemento.Subtotal
                 .Add("campo8", MySqlDbType.VarChar).Value = _Elemento.Hora
                 .Add("campo9", MySqlDbType.Date).Value = Format(_Elemento.Fecha, "yyyy/MM/dd")
@@ -43,6 +43,7 @@ Public Class D_Ventas
             MsgBox("Error al actualizar " & Tabla & " :" + ex.ToString, vbCritical + vbOKOnly, _negocio_nombre)
         End Try
 
+        objCon.Cerrar()
         Return Estado
 
     End Function
@@ -53,6 +54,9 @@ Public Class D_Ventas
         Dim Numero As Integer
 
         res = QueryC("CALL " & Tabla & "_getFolio")
+        If res.Tables(0).Rows.Count > 0 Then
+            Numero = res.Tables(0).Rows(0)(0)
+        End If
 
         Return Numero
     End Function
@@ -114,6 +118,7 @@ Public Class D_Ventas
 
     'Esta funcion contiene los datos de coneccion y consulta a la Base de datos
     Private Function QueryC(ByVal Cadena As String) As DataSet
+        Dim objCon As New Conexion
         Dim ds As New DataSet
         Try
             cn = objCon.conectar
@@ -123,6 +128,11 @@ Public Class D_Ventas
             da.Dispose()
             cn.Close()
             cn.Dispose()
+            Try
+                objCon.Cerrar()
+            Catch ex As Exception
+                X(ex)
+            End Try
             Return ds
             ds.Dispose()
         Catch ex As Exception

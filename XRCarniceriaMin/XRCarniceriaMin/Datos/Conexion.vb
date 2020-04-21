@@ -3,7 +3,7 @@ Public Class Conexion
 
     Dim conexion As New MySqlConnection
 
-    Public Function conectar() As MySqlConnection
+    Public Function Conectar() As MySqlConnection
         Try
             conexion.ConnectionString = "server=" & _Server & ";user id=" & _User & ";password=" & _Password & ";database=" & _DBName
         Catch ex As Exception
@@ -15,6 +15,15 @@ Public Class Conexion
 
         Return conexion
     End Function
+
+    Public Sub Cerrar()
+
+        Try
+            conexion.Close()
+        Catch ex As Exception
+            X(ex)
+        End Try
+    End Sub
 
 
 End Class

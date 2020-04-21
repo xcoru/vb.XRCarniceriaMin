@@ -27,7 +27,7 @@ Partial Class GUI_Caja_Corte
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GUI_Caja_Corte))
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTitulo = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.btnAtras = New System.Windows.Forms.Button()
@@ -58,19 +58,19 @@ Partial Class GUI_Caja_Corte
         Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label1
+        'txtTitulo
         '
-        Me.Label1.BackColor = System.Drawing.Color.CornflowerBlue
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Label1.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(927, 60)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Corte de caja"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.txtTitulo.BackColor = System.Drawing.Color.CornflowerBlue
+        Me.txtTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.txtTitulo.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTitulo.ForeColor = System.Drawing.Color.White
+        Me.txtTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.txtTitulo.Margin = New System.Windows.Forms.Padding(8, 0, 8, 0)
+        Me.txtTitulo.Name = "txtTitulo"
+        Me.txtTitulo.Size = New System.Drawing.Size(927, 60)
+        Me.txtTitulo.TabIndex = 3
+        Me.txtTitulo.Text = "Corte de caja"
+        Me.txtTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Panel1
         '
@@ -337,7 +337,7 @@ Partial Class GUI_Caja_Corte
         Me.ClientSize = New System.Drawing.Size(927, 572)
         Me.Controls.Add(Me.Divisor)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtTitulo)
         Me.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -361,7 +361,7 @@ Partial Class GUI_Caja_Corte
 
     End Sub
 
-    Friend WithEvents Label1 As Label
+    Friend WithEvents txtTitulo As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnAtras As Button
     Friend WithEvents txtEgresoCaja As Label
