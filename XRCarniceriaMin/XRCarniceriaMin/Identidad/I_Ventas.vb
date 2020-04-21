@@ -2,27 +2,27 @@
     Private _id_venta As Integer
     Private _folio As String
     Private _id_usuario As String
-    Private _id_catalogo As String
-    Private _cantidad As Decimal
-    Private _peso As Decimal
+    Private _id_articulo As String
     Private _precio As Decimal
-    Private _total As Decimal
+    Private _cantidad As Decimal
+    Private _subtotal As Decimal
     Private _hora As String
-    Private _fecha As String
-    Private _estado As Integer
+    Private _fecha As Date
 
-    Public Sub New(id_venta As Integer, folio As String, id_usuario As String, id_catalogo As String, cantidad As Decimal, peso As Decimal, precio As Decimal, total As Decimal, hora As String, fecha As String, estado As Integer)
-        Me.Id_venta = id_venta
-        Me.Folio = folio
-        Me.Id_usuario = id_usuario
-        Me.Id_catalogo = id_catalogo
-        Me.Cantidad = cantidad
-        Me.Peso = peso
-        Me.Precio = precio
-        Me.Total = total
-        Me.Hora = hora
-        Me.Fecha = fecha
-        Me.Estado = estado
+    Public Sub New()
+
+    End Sub
+
+    Public Sub New(id_venta As Integer, folio As String, id_usuario As String, id_articulo As String, precio As Decimal, cantidad As Decimal, subtotal As Decimal, hora As String, fecha As Date)
+        _id_venta = id_venta
+        _folio = folio
+        _id_usuario = id_usuario
+        _id_articulo = id_articulo
+        _precio = precio
+        _cantidad = cantidad
+        _subtotal = subtotal
+        _hora = hora
+        _fecha = fecha
     End Sub
 
     Public Property Id_venta As Integer
@@ -52,30 +52,12 @@
         End Set
     End Property
 
-    Public Property Id_catalogo As String
+    Public Property Id_articulo As String
         Get
-            Return _id_catalogo
+            Return _id_articulo
         End Get
         Set(value As String)
-            _id_catalogo = value
-        End Set
-    End Property
-
-    Public Property Cantidad As Decimal
-        Get
-            Return _cantidad
-        End Get
-        Set(value As Decimal)
-            _cantidad = value
-        End Set
-    End Property
-
-    Public Property Peso As Decimal
-        Get
-            Return _peso
-        End Get
-        Set(value As Decimal)
-            _peso = value
+            _id_articulo = value
         End Set
     End Property
 
@@ -88,12 +70,21 @@
         End Set
     End Property
 
-    Public Property Total As Decimal
+    Public Property Cantidad As Decimal
         Get
-            Return _total
+            Return _cantidad
         End Get
         Set(value As Decimal)
-            _total = value
+            _cantidad = value
+        End Set
+    End Property
+
+    Public Property Subtotal As Decimal
+        Get
+            Return _subtotal
+        End Get
+        Set(value As Decimal)
+            _subtotal = value
         End Set
     End Property
 
@@ -106,21 +97,12 @@
         End Set
     End Property
 
-    Public Property Fecha As String
+    Public Property Fecha As Date
         Get
             Return _fecha
         End Get
-        Set(value As String)
+        Set(value As Date)
             _fecha = value
-        End Set
-    End Property
-
-    Public Property Estado As Integer
-        Get
-            Return _estado
-        End Get
-        Set(value As Integer)
-            _estado = value
         End Set
     End Property
 End Class

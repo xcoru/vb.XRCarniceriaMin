@@ -438,14 +438,12 @@ CREATE PROCEDURE ventas_mostrar()
 			id_venta	AS	 'Id',
 			folio		AS	 'Folio',
 			id_usuario 	AS	 'Usuario',
-			id_catalogo AS	 'ID Catalogo',
-			cantidad 	AS	 'Cantidad',
-			peso		AS	 'Peso',
+			id_articulo AS	 'Id Articulo',
 			precio		AS	 'Precio',
-			total		AS	 'Total',
+			cantidad 	AS	 'Cantidad',
+			subtotal	AS	 'SubTotal',
 			hora		AS	 'Hora',
-			fecha		AS	 'Fecha',
-			estado		AS	 'estado'
+			fecha		AS	 'Fecha'
 		FROM ventas;
    END //
 DELIMITER ;
@@ -456,17 +454,15 @@ DROP PROCEDURE IF EXISTS ventas_consultar;
 CREATE PROCEDURE ventas_consultar(IN id_ VARCHAR(20))
    BEGIN
 		SELECT 
-			id_venta	AS	 'ID',
+			id_venta	AS	 'Id',
 			folio		AS	 'Folio',
 			id_usuario 	AS	 'Usuario',
-			id_catalogo AS	 'ID Catalogo',
-			cantidad 	AS	 'Cantidad',
-			peso		AS	 'Peso',
+			id_articulo AS	 'Id Articulo',
 			precio		AS	 'Precio',
-			total		AS	 'Total',
+			cantidad 	AS	 'Cantidad',
+			subtotal	AS	 'SubTotal',
 			hora		AS	 'Hora',
-			fecha		AS	 'Fecha',
-			estado		AS	 'estado'
+			fecha		AS	 'Fecha'
 		FROM ventas 
         WHERE folio = id_;
    END //
@@ -476,32 +472,28 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS ventas_insertar;
  DELIMITER //
 CREATE PROCEDURE ventas_insertar(
-	IN campo1   VARCHAR(20), 
+	IN campo1   INT, 
     IN campo2	VARCHAR(20),
     IN campo3 	VARCHAR(20),
-	IN campo4 	INT,
+	IN campo4 	VARCHAR(20),
     IN campo5 	DEC(10,2),
 	IN campo6 	DEC(10,2),
 	IN campo7 	DEC(10,2),
 	IN campo8 	VARCHAR(20),
-	IN campo9 	VARCHAR(20),
-	IN campo10 	INT
+	IN campo9 	DATE
 )
    BEGIN
 		INSERT INTO ventas(
 			folio, 
 			id_usuario, 
-			id_catalogo, 
-			cantidad, 
-			peso,
+			id_articulo, 
 			precio,
-			total,
+			cantidad, 
+			subtotal,
 			hora,
-			fecha,
-			estado
+			fecha
             ) 
 		VALUES(
-			campo1,
 			campo2,
 			campo3,
 			campo4,
@@ -509,8 +501,7 @@ CREATE PROCEDURE ventas_insertar(
 			campo6,
 			campo7,
 			campo8,
-			campo9,
-			campo10
+			campo9
             );
    END //
 DELIMITER ;
@@ -519,30 +510,26 @@ DELIMITER ;
 DROP PROCEDURE IF EXISTS ventas_editar;
  DELIMITER //
 CREATE PROCEDURE ventas_editar(
-	IN campo1   INT,
-	IN campo2   VARCHAR(20), 
-    IN campo3	VARCHAR(20),
-    IN campo4 	VARCHAR(20),
-	IN campo5 	INT,
-    IN campo6 	DEC(10,2),
+	IN campo1   INT, 
+    IN campo2	VARCHAR(20),
+    IN campo3 	VARCHAR(20),
+	IN campo4 	VARCHAR(20),
+    IN campo5 	DEC(10,2),
+	IN campo6 	DEC(10,2),
 	IN campo7 	DEC(10,2),
-	IN campo8 	DEC(10,2),
-	IN campo9 	VARCHAR(20),
-	IN campo10 	VARCHAR(20),
-	IN campo11 	INT
+	IN campo8 	VARCHAR(20),
+	IN campo9 	DATE
 )
    BEGIN
 		UPDATE ventas SET 
 			folio 			= campo2, 
 			id_usuario		= campo3, 
-			id_catalogo		= campo4, 
-			cantidad		= campo5, 
-			peso			= campo6,
-			precio			= campo7,
-			total			= campo8,
-			hora			= campo9,
-			fecha			= campo10,
-			estado			= campo11
+			id_articulo		= campo4, 
+			precio			= campo5,
+			cantidad		= campo6, 
+			subtotal		= campo7,
+			hora			= campo8,
+			fecha			= campo9
 		WHERE id_venta  	= campo1;
    END //
 DELIMITER ;
@@ -565,21 +552,50 @@ CREATE PROCEDURE ventas_filtrar(
 )
    BEGIN
 		SELECT 
-			id_venta	AS	 'ID',
+			id_venta	AS	 'Id',
 			folio		AS	 'Folio',
 			id_usuario 	AS	 'Usuario',
-			id_catalogo AS	 'ID Catalogo',
-			cantidad 	AS	 'Cantidad',
-			peso		AS	 'Peso',
+			id_articulo AS	 'Id Articulo',
 			precio		AS	 'Precio',
-			total		AS	 'Total',
+			cantidad 	AS	 'Cantidad',
+			subtotal	AS	 'SubTotal',
 			hora		AS	 'Hora',
-			fecha		AS	 'Fecha',
-			estado		AS	 'estado'
+			fecha		AS	 'Fecha'
         FROM ventas WHERE fecha BETWEEN fecha_ini AND fecha_fin LIMIT 1000;
    END //
 DELIMITER ;
 
+
+DROP PROCEDURE IF EXISTS ventas_getFolio;
+ DELIMITER //
+CREATE PROCEDURE ventas_getFolio()
+   BEGIN
+		SELECT MAX(folio) + 1 AS 'FOLIO' 
+		FROM ventas;
+
+   END //
+DELIMITER ;
+
+
+DROP PROCEDURE IF EXISTS ventas_corte_caja;
+ DELIMITER //
+CREATE PROCEDURE ventas_corte_caja(
+	IN _fecha DATE
+)
+   BEGIN
+		SELECT 
+			a.id_articulo AS "Clave A.", 
+			b.descripcion AS "Producto", 
+			b.precio AS "Precio", 
+			a.cantidad AS "Cantidad", 
+			a.subtotal AS "Subtotal", 
+			a.hora AS "Hora"
+		FROM ventas a
+		INNER JOIN articulo AS b 
+		ON a.id_articulo = b.id_articulo 
+		AND a.fecha = _fecha;
+   END //
+DELIMITER ;
 
 #TABLA EGRESO *********** TABLA EGRESO ***********TABLA EGRESO *********************************************************************************
 
@@ -603,7 +619,10 @@ DELIMITER ;
 
 DROP PROCEDURE IF EXISTS egreso_consultar;
  DELIMITER //
-CREATE PROCEDURE egreso_consultar(IN id_ INT)
+CREATE PROCEDURE egreso_consultar(
+	IN fecha_ini DATE,
+	IN fecha_fin DATE
+)
    BEGIN
 		SELECT 
 			id_egreso	AS	 'Id',
@@ -612,8 +631,7 @@ CREATE PROCEDURE egreso_consultar(IN id_ INT)
 			monto 		AS	 'Monto',
 			hora		AS	 'Hora',
 			fecha		AS	 'Fecha'
-		FROM egreso
-        WHERE id_egreso = id_;
+        FROM egreso WHERE fecha BETWEEN fecha_ini AND fecha_fin LIMIT 1000;
    END //
 DELIMITER ;
 

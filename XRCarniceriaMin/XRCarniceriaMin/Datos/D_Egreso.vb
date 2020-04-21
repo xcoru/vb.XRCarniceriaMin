@@ -49,8 +49,8 @@ Public Class D_Egreso
     End Function
 
     'Devuelve la consulta de un articulo en especifico
-    Public Function Consulta(ByVal ID As String) As DataSet
-        Return QueryC("CALL " & Tabla & "_consultar('" & ID & "')")
+    Public Function Consulta(ByVal fecha As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_consultar('" & Format(CDate(fecha), "yyyy/MM/dd") & "', '" & Format(CDate(fecha), "yyyy/MM/dd") & "')")
     End Function
 
     'Devuelve el primer articulo que aparece en la tabla de articulos
@@ -89,8 +89,8 @@ Public Class D_Egreso
     End Sub
 
     'Devuelve los primeros 5 registros que coinciden con el filtro/busqueda
-    Public Function Filtrar(ByVal Cadena As String) As DataSet
-        Return QueryC("CALL " & Tabla & "_filtrar('" & Cadena.Replace(" ", "%").ToString & "')")
+    Public Function Filtrar(ByVal fecha_ini As String, ByVal fecha_fin As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_filtrar('" & fecha_ini & "', '" & fecha_fin & "')")
     End Function
 
     'Esta funcion contiene los datos de coneccion y consulta a la Base de datos

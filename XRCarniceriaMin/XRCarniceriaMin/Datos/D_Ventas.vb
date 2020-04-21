@@ -31,14 +31,12 @@ Public Class D_Ventas
                 .Add("campo1", MySqlDbType.UInt32).Value = _Elemento.Id_venta
                 .Add("campo2", MySqlDbType.VarChar).Value = _Elemento.Folio
                 .Add("campo3", MySqlDbType.VarChar).Value = _Elemento.Id_usuario
-                .Add("campo4", MySqlDbType.VarChar).Value = _Elemento.Id_catalogo
-                .Add("campo5", MySqlDbType.Int32).Value = _Elemento.Cantidad
-                .Add("campo6", MySqlDbType.Decimal).Value = _Elemento.Peso
-                .Add("campo7", MySqlDbType.Decimal).Value = _Elemento.Precio
-                .Add("campo8", MySqlDbType.Decimal).Value = _Elemento.Total
-                .Add("campo9", MySqlDbType.VarChar).Value = _Elemento.Hora
-                .Add("campo10", MySqlDbType.Date).Value = _Elemento.Fecha
-                .Add("campo11", MySqlDbType.Int32).Value = _Elemento.Estado
+                .Add("campo4", MySqlDbType.VarChar).Value = _Elemento.Id_articulo
+                .Add("campo5", MySqlDbType.Decimal).Value = _Elemento.Precio
+                .Add("campo6", MySqlDbType.Decimal).Value = _Elemento.Cantidad
+                .Add("campo7", MySqlDbType.Decimal).Value = _Elemento.Subtotal
+                .Add("campo8", MySqlDbType.VarChar).Value = _Elemento.Hora
+                .Add("campo9", MySqlDbType.Date).Value = Format(_Elemento.Fecha, "yyyy/MM/dd")
             End With
             Estado = da.SelectCommand.ExecuteNonQuery
         Catch ex As Exception
@@ -47,6 +45,21 @@ Public Class D_Ventas
 
         Return Estado
 
+    End Function
+
+    'Obtiene el Folio de venta
+    Public Function getFolio() As Integer
+        Dim res As DataSet
+        Dim Numero As Integer
+
+        res = QueryC("CALL " & Tabla & "_getFolio")
+
+        Return Numero
+    End Function
+
+    'Devuelve la consulta de un articulo en especifico
+    Public Function CorteCaja(ByVal fecha As String) As DataSet
+        Return QueryC("CALL " & Tabla & "_corte_caja('" & Format(CDate(fecha), "yyyy/MM/dd") & "')")
     End Function
 
     'Obtiene el listado de todos los articulos en la tabla articulo

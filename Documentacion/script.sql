@@ -59,16 +59,14 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `xrcarniceriamin`.`ventas` (
   `id_venta` INT NOT NULL AUTO_INCREMENT,
-  `folio` VARCHAR(20) NULL DEFAULT 0,
+  `folio` INT NULL DEFAULT 0,
   `id_usuario` VARCHAR(20) NULL,
-  `id_catalogo` VARCHAR(20) NULL,
-  `cantidad` INT NULL DEFAULT 0,
-  `peso` DECIMAL(10,2) NULL DEFAULT 0,
+  `id_articulo` VARCHAR(20) NULL,
   `precio` DECIMAL(10,2) NULL,
-  `total` DECIMAL(10,2) NULL,
+  `cantidad` DECIMAL(10,2) NULL DEFAULT 0,
+  `subtotal` DECIMAL(10,2) NULL,
   `hora` VARCHAR(20) NULL,
   `fecha` DATE NULL,
-  `estado` INT NULL DEFAULT 1,
   PRIMARY KEY (`id_venta`))
 ENGINE = InnoDB;
 
@@ -113,6 +111,16 @@ COMMIT;
 START TRANSACTION;
 USE `xrcarniceriamin`;
 INSERT INTO `xrcarniceriamin`.`negocio` (`id_negocio`, `nombre`, `descripcion`, `direccion`, `telefono`, `logotipo`) VALUES (1, 'Carniceria', '\"Nombre Carniceria\"', 'Dirección', '000-000-0000', NULL);
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `xrcarniceriamin`.`ventas`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `xrcarniceriamin`;
+INSERT INTO `xrcarniceriamin`.`ventas` (`id_venta`, `folio`, `id_usuario`, `id_articulo`, `precio`, `cantidad`, `subtotal`, `hora`, `fecha`) VALUES (1, 999, '0', '0', 0, 0, 0, '0', '2020-01-01');
 
 COMMIT;
 

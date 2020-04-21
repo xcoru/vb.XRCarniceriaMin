@@ -45,5 +45,19 @@
             txtCambio.Text = Format(Val(txtEfectivo.Text) - Val(txtTotal.Text), "#,###,##0.00")
         End If
 
+        Dim dbVenta As New D_Ventas
+        Dim iventa As New I_Ventas
+        Dim linea As DataGridViewRow
+
+        For Each linea In GUI_Ventas.dgvTabla.Rows
+            Try
+                With iventa
+
+                End With
+            Catch ex As Exception
+                X(ex)
+            End Try
+        Next
+
     End Sub
 End Class
