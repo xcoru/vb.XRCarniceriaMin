@@ -3,29 +3,34 @@
 
     Private Sub BtnEntrar_Click(sender As Object, e As EventArgs) Handles btnEntrar.Click
         Dim Consulta As DataSet
-        If txtUsuario.TextLength > 1 Then
-            If txtPassword.TextLength > 1 Then
-                Consulta = DB.Login(txtUsuario.Text, txtPassword.Text)
-                If Consulta.Tables(0).Rows.Count > 0 Then
-                    _usuario_id_usuario = Consulta.Tables(0).Rows(0)(0).ToString
-                    _usuario_nombre = Consulta.Tables(0).Rows(0)(1).ToString
-                    CargarDB() 'Función publica
-                    GUI_Caja_Inicio.Show()
-                    Close()
+        Try
+            If txtUsuario.TextLength > 1 Then
+                If txtPassword.TextLength > 1 Then
+                    Consulta = DB.Login(txtUsuario.Text, txtPassword.Text)
+                    If Consulta.Tables(0).Rows.Count > 0 Then
+                        _usuario_id_usuario = Consulta.Tables(0).Rows(0)(0).ToString
+                        _usuario_nombre = Consulta.Tables(0).Rows(0)(1).ToString
+                        CargarDB() 'Función publica
+                        GUI_Caja_Inicio.Show()
+                        Close()
+                    Else
+                        msg("Datos incorrectos!", 3)
+                        txtUsuario.Text = ""
+                        txtPassword.Text = ""
+                        txtUsuario.Select()
+                    End If
                 Else
-                    msg("Datos incorrectos!", 3)
-                    txtUsuario.Text = ""
-                    txtPassword.Text = ""
-                    txtUsuario.Select()
+                    msg("Ingrese una contraseña válida!", 3)
+                    txtPassword.Select()
                 End If
             Else
-                msg("Ingrese una contraseña válida!", 3)
-                txtPassword.Select()
+                msg("Ingrese un usuario válido!", 3)
+                txtUsuario.Select()
             End If
-        Else
-            msg("Ingrese un usuario válido!", 3)
-            txtUsuario.Select()
-        End If
+        Catch ex As Exception
+            X(ex)
+        End Try
+
     End Sub
 
     Private Sub GUI_Login_Load(sender As Object, e As EventArgs) Handles Me.Load
