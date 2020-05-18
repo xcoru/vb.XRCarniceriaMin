@@ -43,8 +43,6 @@ Partial Class GUI_Articulos
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.imgArticulo = New System.Windows.Forms.PictureBox()
-        Me.btnImagen = New System.Windows.Forms.Button()
         Me.txtImagen = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -55,6 +53,8 @@ Partial Class GUI_Articulos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.P_Tabla = New System.Windows.Forms.Panel()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
+        Me.imgArticulo = New System.Windows.Forms.PictureBox()
+        Me.btnImagen = New System.Windows.Forms.Button()
         Me.P_Articulos.SuspendLayout()
         Me.FlowLayoutPanel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -62,10 +62,10 @@ Partial Class GUI_Articulos
         Me.Panel5.SuspendLayout()
         Me.Panel6.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        CType(Me.imgArticulo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel7.SuspendLayout()
         Me.P_Tabla.SuspendLayout()
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgArticulo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'P_Articulos
@@ -238,27 +238,6 @@ Partial Class GUI_Articulos
         Me.Panel8.Size = New System.Drawing.Size(417, 234)
         Me.Panel8.TabIndex = 10
         '
-        'imgArticulo
-        '
-        Me.imgArticulo.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.imgArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.imgArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.imgArticulo.Location = New System.Drawing.Point(227, 39)
-        Me.imgArticulo.Name = "imgArticulo"
-        Me.imgArticulo.Size = New System.Drawing.Size(188, 188)
-        Me.imgArticulo.TabIndex = 6
-        Me.imgArticulo.TabStop = False
-        '
-        'btnImagen
-        '
-        Me.btnImagen.Font = New System.Drawing.Font("Arial Narrow", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnImagen.Location = New System.Drawing.Point(5, 66)
-        Me.btnImagen.Name = "btnImagen"
-        Me.btnImagen.Size = New System.Drawing.Size(216, 37)
-        Me.btnImagen.TabIndex = 5
-        Me.btnImagen.Text = ">>"
-        Me.btnImagen.UseVisualStyleBackColor = True
-        '
         'txtImagen
         '
         Me.txtImagen.Font = New System.Drawing.Font("Arial", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -415,6 +394,28 @@ Partial Class GUI_Articulos
         Me.dgvTabla.Size = New System.Drawing.Size(1014, 307)
         Me.dgvTabla.TabIndex = 0
         '
+        'imgArticulo
+        '
+        Me.imgArticulo.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.imgArticulo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.imgArticulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.imgArticulo.Location = New System.Drawing.Point(227, 39)
+        Me.imgArticulo.Name = "imgArticulo"
+        Me.imgArticulo.Size = New System.Drawing.Size(188, 188)
+        Me.imgArticulo.TabIndex = 6
+        Me.imgArticulo.TabStop = False
+        '
+        'btnImagen
+        '
+        Me.btnImagen.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Editar
+        Me.btnImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnImagen.Font = New System.Drawing.Font("Arial Narrow", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnImagen.Location = New System.Drawing.Point(5, 65)
+        Me.btnImagen.Name = "btnImagen"
+        Me.btnImagen.Size = New System.Drawing.Size(216, 38)
+        Me.btnImagen.TabIndex = 5
+        Me.btnImagen.UseVisualStyleBackColor = True
+        '
         'GUI_Articulos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -438,10 +439,10 @@ Partial Class GUI_Articulos
         Me.Panel6.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
-        CType(Me.imgArticulo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel7.ResumeLayout(False)
         Me.P_Tabla.ResumeLayout(False)
         CType(Me.dgvTabla, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgArticulo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

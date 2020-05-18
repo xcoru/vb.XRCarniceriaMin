@@ -38,11 +38,8 @@ Partial Class GUI_Ventas
         Me.txtUsuario = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnCancelar = New System.Windows.Forms.Button()
-        Me.btnCobrar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtTotal = New System.Windows.Forms.Label()
-        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.dgvTabla = New System.Windows.Forms.DataGridView()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -57,13 +54,16 @@ Partial Class GUI_Ventas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.btnArticulos = New System.Windows.Forms.Button()
         Me.btnCorte = New System.Windows.Forms.Button()
         Me.btnEgreso = New System.Windows.Forms.Button()
         Me.btnConfig = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.btnCobrar = New System.Windows.Forms.Button()
+        Me.btnAgregar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -239,32 +239,6 @@ Partial Class GUI_Ventas
         Me.Panel5.Size = New System.Drawing.Size(383, 120)
         Me.Panel5.TabIndex = 11
         '
-        'btnCancelar
-        '
-        Me.btnCancelar.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnCancelar.FlatAppearance.BorderSize = 0
-        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(15, 10)
-        Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(80, 80)
-        Me.btnCancelar.TabIndex = 10
-        Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = False
-        '
-        'btnCobrar
-        '
-        Me.btnCobrar.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnCobrar.FlatAppearance.BorderSize = 0
-        Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCobrar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCobrar.Location = New System.Drawing.Point(492, 10)
-        Me.btnCobrar.Name = "btnCobrar"
-        Me.btnCobrar.Size = New System.Drawing.Size(80, 80)
-        Me.btnCobrar.TabIndex = 9
-        Me.btnCobrar.Text = "Cobrar"
-        Me.btnCobrar.UseVisualStyleBackColor = False
-        '
         'Label4
         '
         Me.Label4.BackColor = System.Drawing.Color.Green
@@ -288,19 +262,6 @@ Partial Class GUI_Ventas
         Me.txtTotal.TabIndex = 7
         Me.txtTotal.Text = "0.00"
         Me.txtTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'btnAgregar
-        '
-        Me.btnAgregar.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnAgregar.FlatAppearance.BorderSize = 0
-        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(101, 10)
-        Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(80, 80)
-        Me.btnAgregar.TabIndex = 5
-        Me.btnAgregar.Text = "Agre.."
-        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'Panel4
         '
@@ -422,6 +383,39 @@ Partial Class GUI_Ventas
         Me.Label5.Text = "Config."
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(15, 92)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(80, 25)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Cancel."
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label7
+        '
+        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(101, 92)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(80, 25)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "Agreg."
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label8
+        '
+        Me.Label8.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(492, 92)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(80, 25)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Cobrar"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'btnArticulos
         '
         Me.btnArticulos.BackColor = System.Drawing.Color.AliceBlue
@@ -478,38 +472,48 @@ Partial Class GUI_Ventas
         Me.btnConfig.TabIndex = 1
         Me.btnConfig.UseVisualStyleBackColor = False
         '
-        'Label6
+        'btnCancelar
         '
-        Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(15, 92)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(80, 25)
-        Me.Label6.TabIndex = 12
-        Me.Label6.Text = "Cancel."
-        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnCancelar.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnCancelar.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.cancelar
+        Me.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCancelar.FlatAppearance.BorderSize = 0
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.Location = New System.Drawing.Point(15, 10)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(80, 80)
+        Me.btnCancelar.TabIndex = 10
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
-        'Label7
+        'btnCobrar
         '
-        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(101, 92)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(80, 25)
-        Me.Label7.TabIndex = 13
-        Me.Label7.Text = "Agreg."
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnCobrar.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnCobrar.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Pagar
+        Me.btnCobrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnCobrar.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue
+        Me.btnCobrar.FlatAppearance.BorderSize = 3
+        Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCobrar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCobrar.Location = New System.Drawing.Point(492, 10)
+        Me.btnCobrar.Name = "btnCobrar"
+        Me.btnCobrar.Size = New System.Drawing.Size(80, 80)
+        Me.btnCobrar.TabIndex = 9
+        Me.btnCobrar.UseVisualStyleBackColor = False
         '
-        'Label8
+        'btnAgregar
         '
-        Me.Label8.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(492, 92)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(80, 25)
-        Me.Label8.TabIndex = 14
-        Me.Label8.Text = "Cobrar"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnAgregar.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnAgregar.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.add
+        Me.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAgregar.FlatAppearance.BorderSize = 0
+        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAgregar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregar.Location = New System.Drawing.Point(101, 10)
+        Me.btnAgregar.Name = "btnAgregar"
+        Me.btnAgregar.Size = New System.Drawing.Size(80, 80)
+        Me.btnAgregar.TabIndex = 5
+        Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'GUI_Ventas
         '

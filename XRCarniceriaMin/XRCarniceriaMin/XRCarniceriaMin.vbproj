@@ -244,6 +244,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LOGO_Libersoft_Oficial 2 - 90x90.ico" />
+    <None Include="Resources\Editar.png" />
+    <None Include="Resources\Pagar.png" />
+    <None Include="Resources\cobrar.jpg" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\cancelar.png" />
     <None Include="Resources\Catalogo.jpg" />
     <None Include="Resources\Corte.png" />
     <None Include="Resources\Egreso.png" />

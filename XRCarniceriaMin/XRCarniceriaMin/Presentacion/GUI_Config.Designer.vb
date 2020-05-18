@@ -33,15 +33,15 @@ Partial Class GUI_Config
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtLogotipo = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.btnImpresora = New System.Windows.Forms.Button()
         Me.txtImpresora = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnArchivo = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.imgLogoTipo = New System.Windows.Forms.PictureBox()
         Me.btnAtras = New System.Windows.Forms.Button()
         Me.diaArchivo = New System.Windows.Forms.OpenFileDialog()
         Me.diaImpresora = New System.Windows.Forms.PrintDialog()
+        Me.imgLogoTipo = New System.Windows.Forms.PictureBox()
+        Me.btnArchivo = New System.Windows.Forms.Button()
+        Me.btnImpresora = New System.Windows.Forms.Button()
         CType(Me.imgLogoTipo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -143,17 +143,6 @@ Partial Class GUI_Config
         Me.Label6.Text = "Logotipo"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnImpresora
-        '
-        Me.btnImpresora.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.btnImpresora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnImpresora.Location = New System.Drawing.Point(217, 425)
-        Me.btnImpresora.Name = "btnImpresora"
-        Me.btnImpresora.Size = New System.Drawing.Size(50, 35)
-        Me.btnImpresora.TabIndex = 12
-        Me.btnImpresora.Text = ">>"
-        Me.btnImpresora.UseVisualStyleBackColor = False
-        '
         'txtImpresora
         '
         Me.txtImpresora.BackColor = System.Drawing.Color.White
@@ -174,17 +163,6 @@ Partial Class GUI_Config
         Me.Label7.Text = "Impresora"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnArchivo
-        '
-        Me.btnArchivo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
-        Me.btnArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnArchivo.Location = New System.Drawing.Point(602, 262)
-        Me.btnArchivo.Name = "btnArchivo"
-        Me.btnArchivo.Size = New System.Drawing.Size(50, 35)
-        Me.btnArchivo.TabIndex = 15
-        Me.btnArchivo.Text = ">>"
-        Me.btnArchivo.UseVisualStyleBackColor = False
-        '
         'btnGuardar
         '
         Me.btnGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -197,16 +175,6 @@ Partial Class GUI_Config
         Me.btnGuardar.TabIndex = 16
         Me.btnGuardar.Text = "Guardar"
         Me.btnGuardar.UseVisualStyleBackColor = False
-        '
-        'imgLogoTipo
-        '
-        Me.imgLogoTipo.BackColor = System.Drawing.Color.Lavender
-        Me.imgLogoTipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.imgLogoTipo.Location = New System.Drawing.Point(296, 305)
-        Me.imgLogoTipo.Name = "imgLogoTipo"
-        Me.imgLogoTipo.Size = New System.Drawing.Size(356, 157)
-        Me.imgLogoTipo.TabIndex = 17
-        Me.imgLogoTipo.TabStop = False
         '
         'btnAtras
         '
@@ -229,6 +197,40 @@ Partial Class GUI_Config
         '
         Me.diaImpresora.AllowPrintToFile = False
         Me.diaImpresora.UseEXDialog = True
+        '
+        'imgLogoTipo
+        '
+        Me.imgLogoTipo.BackColor = System.Drawing.Color.Lavender
+        Me.imgLogoTipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.imgLogoTipo.Location = New System.Drawing.Point(296, 305)
+        Me.imgLogoTipo.Name = "imgLogoTipo"
+        Me.imgLogoTipo.Size = New System.Drawing.Size(356, 157)
+        Me.imgLogoTipo.TabIndex = 17
+        Me.imgLogoTipo.TabStop = False
+        '
+        'btnArchivo
+        '
+        Me.btnArchivo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.btnArchivo.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Editar
+        Me.btnArchivo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnArchivo.Location = New System.Drawing.Point(602, 262)
+        Me.btnArchivo.Name = "btnArchivo"
+        Me.btnArchivo.Size = New System.Drawing.Size(50, 35)
+        Me.btnArchivo.TabIndex = 15
+        Me.btnArchivo.UseVisualStyleBackColor = False
+        '
+        'btnImpresora
+        '
+        Me.btnImpresora.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.btnImpresora.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Editar
+        Me.btnImpresora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnImpresora.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImpresora.Location = New System.Drawing.Point(217, 425)
+        Me.btnImpresora.Name = "btnImpresora"
+        Me.btnImpresora.Size = New System.Drawing.Size(50, 35)
+        Me.btnImpresora.TabIndex = 12
+        Me.btnImpresora.UseVisualStyleBackColor = False
         '
         'GUI_Config
         '
