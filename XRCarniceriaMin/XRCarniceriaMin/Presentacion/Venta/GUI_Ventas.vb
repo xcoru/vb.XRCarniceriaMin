@@ -77,4 +77,20 @@
     Private Sub BtnEgreso_Click(sender As Object, e As EventArgs) Handles btnEgreso.Click
         GUI_Egreso.ShowDialog()
     End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+        Call BtnCorte_Click(sender, e)
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        Call BtnEgreso_Click(sender, e)
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+        Call BtnArticulos_Click(sender, e)
+    End Sub
+
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        Call BtnConfig_Click(sender, e)
+    End Sub
 End Class

@@ -175,7 +175,7 @@ Partial Class GUI_Articulos
         Me.txtTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.txtTipo.Font = New System.Drawing.Font("Arial", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTipo.FormattingEnabled = True
-        Me.txtTipo.Items.AddRange(New Object() {"Kg.", "Pieza"})
+        Me.txtTipo.Items.AddRange(New Object() {"Kg.", "Pza."})
         Me.txtTipo.Location = New System.Drawing.Point(4, 39)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(210, 35)

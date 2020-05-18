@@ -36,12 +36,8 @@ Partial Class GUI_Ventas
         Me.txtHora = New System.Windows.Forms.Label()
         Me.txtFecha = New System.Windows.Forms.Label()
         Me.txtUsuario = New System.Windows.Forms.Label()
-        Me.btnCorte = New System.Windows.Forms.Button()
-        Me.btnEgreso = New System.Windows.Forms.Button()
-        Me.btnConfig = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnArticulos = New System.Windows.Forms.Button()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.btnCobrar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -57,6 +53,17 @@ Partial Class GUI_Ventas
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.timFecha = New System.Windows.Forms.Timer(Me.components)
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.btnArticulos = New System.Windows.Forms.Button()
+        Me.btnCorte = New System.Windows.Forms.Button()
+        Me.btnEgreso = New System.Windows.Forms.Button()
+        Me.btnConfig = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel7.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -196,49 +203,13 @@ Partial Class GUI_Ventas
         Me.txtUsuario.TabIndex = 2
         Me.txtUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'btnCorte
-        '
-        Me.btnCorte.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnCorte.FlatAppearance.BorderSize = 0
-        Me.btnCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCorte.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCorte.Location = New System.Drawing.Point(12, 15)
-        Me.btnCorte.Name = "btnCorte"
-        Me.btnCorte.Size = New System.Drawing.Size(80, 80)
-        Me.btnCorte.TabIndex = 3
-        Me.btnCorte.Text = "Corte"
-        Me.btnCorte.UseVisualStyleBackColor = False
-        '
-        'btnEgreso
-        '
-        Me.btnEgreso.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnEgreso.FlatAppearance.BorderSize = 0
-        Me.btnEgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEgreso.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEgreso.Location = New System.Drawing.Point(105, 15)
-        Me.btnEgreso.Name = "btnEgreso"
-        Me.btnEgreso.Size = New System.Drawing.Size(80, 80)
-        Me.btnEgreso.TabIndex = 2
-        Me.btnEgreso.Text = "Egreso"
-        Me.btnEgreso.UseVisualStyleBackColor = False
-        '
-        'btnConfig
-        '
-        Me.btnConfig.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnConfig.FlatAppearance.BorderSize = 0
-        Me.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnConfig.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnConfig.Location = New System.Drawing.Point(291, 15)
-        Me.btnConfig.Name = "btnConfig"
-        Me.btnConfig.Size = New System.Drawing.Size(80, 80)
-        Me.btnConfig.TabIndex = 1
-        Me.btnConfig.Text = "Config"
-        Me.btnConfig.UseVisualStyleBackColor = False
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Controls.Add(Me.btnCancelar)
         Me.Panel3.Controls.Add(Me.btnCobrar)
@@ -248,12 +219,16 @@ Partial Class GUI_Ventas
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 140)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1015, 111)
+        Me.Panel3.Size = New System.Drawing.Size(1015, 120)
         Me.Panel3.TabIndex = 2
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.LightSlateGray
+        Me.Panel5.Controls.Add(Me.Label5)
+        Me.Panel5.Controls.Add(Me.Label3)
+        Me.Panel5.Controls.Add(Me.Label2)
+        Me.Panel5.Controls.Add(Me.Label1)
         Me.Panel5.Controls.Add(Me.btnArticulos)
         Me.Panel5.Controls.Add(Me.btnCorte)
         Me.Panel5.Controls.Add(Me.btnEgreso)
@@ -261,21 +236,8 @@ Partial Class GUI_Ventas
         Me.Panel5.Dock = System.Windows.Forms.DockStyle.Right
         Me.Panel5.Location = New System.Drawing.Point(632, 0)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(383, 111)
+        Me.Panel5.Size = New System.Drawing.Size(383, 120)
         Me.Panel5.TabIndex = 11
-        '
-        'btnArticulos
-        '
-        Me.btnArticulos.BackColor = System.Drawing.Color.AliceBlue
-        Me.btnArticulos.FlatAppearance.BorderSize = 0
-        Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnArticulos.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnArticulos.Location = New System.Drawing.Point(198, 15)
-        Me.btnArticulos.Name = "btnArticulos"
-        Me.btnArticulos.Size = New System.Drawing.Size(80, 80)
-        Me.btnArticulos.TabIndex = 4
-        Me.btnArticulos.Text = "Productos"
-        Me.btnArticulos.UseVisualStyleBackColor = False
         '
         'btnCancelar
         '
@@ -283,7 +245,7 @@ Partial Class GUI_Ventas
         Me.btnCancelar.FlatAppearance.BorderSize = 0
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCancelar.Location = New System.Drawing.Point(15, 15)
+        Me.btnCancelar.Location = New System.Drawing.Point(15, 10)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(80, 80)
         Me.btnCancelar.TabIndex = 10
@@ -296,7 +258,7 @@ Partial Class GUI_Ventas
         Me.btnCobrar.FlatAppearance.BorderSize = 0
         Me.btnCobrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCobrar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCobrar.Location = New System.Drawing.Point(492, 15)
+        Me.btnCobrar.Location = New System.Drawing.Point(492, 10)
         Me.btnCobrar.Name = "btnCobrar"
         Me.btnCobrar.Size = New System.Drawing.Size(80, 80)
         Me.btnCobrar.TabIndex = 9
@@ -308,7 +270,7 @@ Partial Class GUI_Ventas
         Me.Label4.BackColor = System.Drawing.Color.Green
         Me.Label4.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(198, 15)
+        Me.Label4.Location = New System.Drawing.Point(198, 10)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(276, 39)
         Me.Label4.TabIndex = 8
@@ -320,7 +282,7 @@ Partial Class GUI_Ventas
         Me.txtTotal.BackColor = System.Drawing.Color.WhiteSmoke
         Me.txtTotal.Font = New System.Drawing.Font("Arial", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtTotal.ForeColor = System.Drawing.Color.Blue
-        Me.txtTotal.Location = New System.Drawing.Point(198, 54)
+        Me.txtTotal.Location = New System.Drawing.Point(198, 49)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.Size = New System.Drawing.Size(276, 41)
         Me.txtTotal.TabIndex = 7
@@ -333,7 +295,7 @@ Partial Class GUI_Ventas
         Me.btnAgregar.FlatAppearance.BorderSize = 0
         Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAgregar.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(101, 15)
+        Me.btnAgregar.Location = New System.Drawing.Point(101, 10)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(80, 80)
         Me.btnAgregar.TabIndex = 5
@@ -345,10 +307,10 @@ Partial Class GUI_Ventas
         Me.Panel4.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.Panel4.Controls.Add(Me.dgvTabla)
         Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(0, 251)
+        Me.Panel4.Location = New System.Drawing.Point(0, 260)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Padding = New System.Windows.Forms.Padding(15)
-        Me.Panel4.Size = New System.Drawing.Size(1015, 382)
+        Me.Panel4.Size = New System.Drawing.Size(1015, 373)
         Me.Panel4.TabIndex = 3
         '
         'dgvTabla
@@ -366,7 +328,7 @@ Partial Class GUI_Ventas
         Me.dgvTabla.Location = New System.Drawing.Point(15, 15)
         Me.dgvTabla.Name = "dgvTabla"
         Me.dgvTabla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvTabla.Size = New System.Drawing.Size(985, 352)
+        Me.dgvTabla.Size = New System.Drawing.Size(985, 343)
         Me.dgvTabla.TabIndex = 0
         '
         'Column1
@@ -415,6 +377,139 @@ Partial Class GUI_Ventas
         '
         Me.timFecha.Enabled = True
         Me.timFecha.Interval = 1000
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(12, 92)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 25)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Corte"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(105, 92)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(80, 25)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Egresos"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label3
+        '
+        Me.Label3.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(198, 92)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(80, 25)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Artic."
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label5
+        '
+        Me.Label5.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(288, 92)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(80, 25)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "Config."
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'btnArticulos
+        '
+        Me.btnArticulos.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnArticulos.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Catalogo
+        Me.btnArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnArticulos.FlatAppearance.BorderSize = 0
+        Me.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnArticulos.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnArticulos.Location = New System.Drawing.Point(198, 9)
+        Me.btnArticulos.Name = "btnArticulos"
+        Me.btnArticulos.Size = New System.Drawing.Size(80, 80)
+        Me.btnArticulos.TabIndex = 4
+        Me.btnArticulos.UseVisualStyleBackColor = False
+        '
+        'btnCorte
+        '
+        Me.btnCorte.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnCorte.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Corte
+        Me.btnCorte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnCorte.FlatAppearance.BorderSize = 0
+        Me.btnCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCorte.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCorte.Location = New System.Drawing.Point(12, 9)
+        Me.btnCorte.Name = "btnCorte"
+        Me.btnCorte.Size = New System.Drawing.Size(80, 80)
+        Me.btnCorte.TabIndex = 3
+        Me.btnCorte.UseVisualStyleBackColor = False
+        '
+        'btnEgreso
+        '
+        Me.btnEgreso.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnEgreso.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Egreso
+        Me.btnEgreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnEgreso.FlatAppearance.BorderSize = 0
+        Me.btnEgreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEgreso.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEgreso.Location = New System.Drawing.Point(105, 9)
+        Me.btnEgreso.Name = "btnEgreso"
+        Me.btnEgreso.Size = New System.Drawing.Size(80, 80)
+        Me.btnEgreso.TabIndex = 2
+        Me.btnEgreso.UseVisualStyleBackColor = False
+        '
+        'btnConfig
+        '
+        Me.btnConfig.BackColor = System.Drawing.Color.AliceBlue
+        Me.btnConfig.BackgroundImage = Global.XRCarniceriaMin.My.Resources.Resources.Config
+        Me.btnConfig.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnConfig.FlatAppearance.BorderSize = 0
+        Me.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnConfig.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnConfig.Location = New System.Drawing.Point(291, 9)
+        Me.btnConfig.Name = "btnConfig"
+        Me.btnConfig.Size = New System.Drawing.Size(80, 80)
+        Me.btnConfig.TabIndex = 1
+        Me.btnConfig.UseVisualStyleBackColor = False
+        '
+        'Label6
+        '
+        Me.Label6.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(15, 92)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(80, 25)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Cancel."
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label7
+        '
+        Me.Label7.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(101, 92)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(80, 25)
+        Me.Label7.TabIndex = 13
+        Me.Label7.Text = "Agreg."
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label8
+        '
+        Me.Label8.Font = New System.Drawing.Font("Arial", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(492, 92)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(80, 25)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Cobrar"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GUI_Ventas
         '
@@ -474,4 +569,11 @@ Partial Class GUI_Ventas
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
 End Class

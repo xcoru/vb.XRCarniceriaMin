@@ -244,6 +244,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LOGO_Libersoft_Oficial 2 - 90x90.ico" />
+    <None Include="Resources\Catalogo.jpg" />
+    <None Include="Resources\Corte.png" />
+    <None Include="Resources\Egreso.png" />
+    <None Include="Resources\Config.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
